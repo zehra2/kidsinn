@@ -41,6 +41,59 @@ export default function BookDetailPage({
 
   return (
     <>
+      {/* Schema.org Book & Breadcrumbs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://bestkidbooks.online"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Curated Books",
+                    "item": "https://bestkidbooks.online/books"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": book.title,
+                    "item": `https://bestkidbooks.online/books/${book.id}`
+                  }
+                ]
+              },
+              {
+                "@type": "Book",
+                "@id": `https://bestkidbooks.online/books/${book.id}#book`,
+                "name": book.title,
+                "author": {
+                  "@type": "Person",
+                  "name": book.author || "BEST KidSbooks"
+                },
+                "description": book.blurb,
+                "inLanguage": "en",
+                "bookFormat": "https://schema.org/Hardcover",
+                "offers": {
+                  "@type": "Offer",
+                  "price": book.price.replace("$", ""),
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://bestkidbooks.online/shop"
+                }
+              }
+            ]
+          })
+        }}
+      />
       <Nav />
 
       {/* ───────────── BREADCRUMB & HEADER ───────────── */}

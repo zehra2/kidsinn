@@ -40,6 +40,56 @@ export default function JournalDetailPage({
 
   return (
     <>
+      {/* Schema.org CreativeWork & Breadcrumbs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://bestkidbooks.online"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Reading Journals",
+                    "item": "https://bestkidbooks.online/journals"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": journal.title,
+                    "item": `https://bestkidbooks.online/journals/${journal.id}`
+                  }
+                ]
+              },
+              {
+                "@type": "CreativeWork",
+                "@id": `https://bestkidbooks.online/journals/${journal.id}#journal`,
+                "name": journal.title,
+                "headline": journal.subtitle,
+                "description": journal.description,
+                "educationalLevel": journal.age,
+                "genre": "Family Literacy & Emotional Reflection",
+                "inLanguage": "en",
+                "isAccessibleForFree": true,
+                "provider": {
+                  "@type": "Organization",
+                  "name": "BEST KidSbooks Shop",
+                  "url": "https://bestkidbooks.online"
+                }
+              }
+            ]
+          })
+        }}
+      />
       <Nav />
 
       {/* ───────────── BREADCRUMB & HEADER ───────────── */}

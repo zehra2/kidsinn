@@ -55,7 +55,7 @@ export default function PlansPage() {
         <div className="relative mx-auto max-w-[1240px] px-4 md:px-8">
           <div className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-paper px-3 py-1 text-[12.5px] font-extrabold text-ink shadow-[2px_2px_0px_0px_#181a20]">
-              <img src="/images/reading-bear.png" alt="" className="h-5 w-5 object-contain" />
+              <img src="/images/reading-bear.png" alt="BEST KidSbooks Reading Bear Mascot" className="h-5 w-5 object-contain" />
               <span>BEST KidSbooks Shop</span>
             </span>
             <span className="mono-label chunky-sm inline-block -rotate-1 rounded-full bg-honey px-3 py-1 text-ink">

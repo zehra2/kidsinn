@@ -7,33 +7,73 @@ const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 export const metadata: Metadata = {
   metadataBase: new URL("https://bestkidbooks.online"),
   title: {
-    default: "BEST KidSbooks Shop — picture books, parent tools & courses",
+    default: "BEST KidSbooks Shop — Picture Books, Free Phonics Printables & Reading Journals",
     template: "%s · BEST KidSbooks Shop",
   },
   description:
-    "Picture books chosen for read-aloud time, free parent calculators backed by AAP guidance and the million-word gap research, and short courses that help parents raise readers.",
+    "Evidence-based children's books, free multi-sensory phonics printables, keepsake bedtime reading journals, and AAP-backed screen time calculators.",
   keywords: [
     "best kids books",
     "kids books shop",
-    "picture books for kids",
-    "screen time calculator",
-    "read aloud goals",
-    "parent reading courses",
+    "free phonics printables",
+    "cvc sound box mats",
+    "elkonin sound boxes printable",
+    "silent e magic wand activity",
+    "bedtime reading journals",
+    "children picture books",
+    "dialogic reading questions",
+    "screen time calculator for kids",
+    "aap screen time guidance",
+    "30 day reading habit tracker",
+    "early literacy activities",
+    "family reading routines",
   ],
+  authors: [{ name: "BEST KidSbooks Shop", url: "https://bestkidbooks.online" }],
+  creator: "BEST KidSbooks Shop",
+  publisher: "BEST KidSbooks Shop",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "https://bestkidbooks.online",
+  },
   openGraph: {
     type: "website",
+    locale: "en_US",
+    url: "https://bestkidbooks.online",
     siteName: "BEST KidSbooks Shop",
-    title: "BEST KidSbooks Shop — turn screen time into story time",
+    title: "BEST KidSbooks Shop — Turn Screen Time into Story Time",
     description:
-      "Books, free parent calculators and short courses for families raising readers.",
+      "Curated picture books, free Elkonin phonics mats, keepsake bedtime journals, and parent screen-time calculators. 100% free offline learning tools.",
     images: [
       {
         url: "/images/logo.png",
         width: 635,
         height: 224,
-        alt: "BEST KidSbooks Shop",
+        alt: "BEST KidSbooks Shop Logo and Reading Bear Mascot",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BEST KidSbooks Shop — Picture Books, Phonics Printables & Journals",
+    description:
+      "Transform bedtime reading into joyful connection. Free multi-sensory phonics mats, reading trackers, and picture book discussion guides.",
+    images: ["/images/logo.png"],
+    creator: "@bestkidbooks",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: [
@@ -82,6 +122,47 @@ export default function RootLayout({
             crossOrigin="anonymous"
           />
         ) : null}
+        {/* Structured Data: Organization & WebSite Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://bestkidbooks.online/#organization",
+                  "name": "BEST KidSbooks Shop",
+                  "url": "https://bestkidbooks.online",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://bestkidbooks.online/images/logo.png",
+                    "caption": "BEST KidSbooks Shop Reading Bear"
+                  },
+                  "description": "Evidence-backed children picture books, multi-sensory phonics printables, family reading journals, and parent screen-time tools.",
+                  "sameAs": [
+                    "https://bestkidbooks.online",
+                    "https://www.pinterest.com/bestkidbooks"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://bestkidbooks.online/#website",
+                  "url": "https://bestkidbooks.online",
+                  "name": "BEST KidSbooks Shop",
+                  "publisher": {
+                    "@id": "https://bestkidbooks.online/#organization"
+                  },
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://bestkidbooks.online/books?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </head>
       <body>
         {/* Google tag (gtag.js) */}

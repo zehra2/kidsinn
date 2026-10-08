@@ -40,6 +40,61 @@ export default function PrintableDetailPage({
 
   return (
     <>
+      {/* Schema.org LearningResource & Breadcrumbs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://bestkidbooks.online"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Free Printables",
+                    "item": "https://bestkidbooks.online/printables"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": printable.title,
+                    "item": `https://bestkidbooks.online/printables/${printable.id}`
+                  }
+                ]
+              },
+              {
+                "@type": "LearningResource",
+                "@id": `https://bestkidbooks.online/printables/${printable.id}#resource`,
+                "name": printable.title,
+                "description": printable.description,
+                "educationalLevel": printable.age,
+                "learningResourceType": "Worksheet",
+                "inLanguage": "en",
+                "isAccessibleForFree": true,
+                "provider": {
+                  "@type": "Organization",
+                  "name": "BEST KidSbooks Shop",
+                  "url": "https://bestkidbooks.online"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              }
+            ]
+          })
+        }}
+      />
       <Nav />
 
       {/* ───────────── BREADCRUMB & HEADER ───────────── */}

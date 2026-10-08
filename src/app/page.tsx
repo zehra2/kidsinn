@@ -65,7 +65,7 @@ export default function Home() {
           <div>
             <div className="mb-4 flex flex-wrap items-center gap-2.5">
               <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-cream px-3 py-1 text-[12.5px] font-extrabold text-ink shadow-[2px_2px_0px_0px_#181a20]">
-                <img src="/images/reading-bear.png" alt="" className="h-5 w-5 object-contain" />
+                <img src="/images/reading-bear.png" alt="BEST KidSbooks Reading Bear Mascot" className="h-5 w-5 object-contain" />
                 <span>BEST KidSbooks Shop</span>
               </span>
               <span className="mono-label inline-block -rotate-2 border-2 border-ink bg-blue px-3 py-1 text-cream">
@@ -631,6 +631,105 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ───────────── FREQUENTLY ASKED QUESTIONS (AEO & FAQ SCHEMA) ───────────── */}
+      <section className="bg-paper py-16 border-t-[3px] border-ink">
+        <div className="mx-auto max-w-[1000px] px-4 md:px-8">
+          <SectionHead
+            kicker="Early Literacy FAQ"
+            title="Common Questions About Bedtime Reading & Phonics"
+            sub="Evidence-based answers grounded in pediatric research and classroom reading science."
+            centered
+          />
+
+          <div className="mt-10 space-y-4">
+            <details className="group chunky rounded-2xl bg-cream p-5 transition-all open:bg-cream border-2 border-ink">
+              <summary className="flex cursor-pointer items-center justify-between font-display text-[18px] font-extrabold text-ink list-none">
+                <span>How can I get my reluctant child to enjoy reading without bedtime battles?</span>
+                <span className="transition-transform group-open:rotate-180 text-orange text-[20px]">▾</span>
+              </summary>
+              <p className="mt-3 text-[15px] leading-relaxed text-ink/80 border-t border-dashed border-ink/20 pt-3">
+                Focus on emotional connection rather than quizzing comprehension. Spend 5 to 10 focused minutes snuggled together without screens in the room. Use open-ended wonder questions (e.g., “If you could jump into tonight’s story, which page would you sleep on?”) rather than testing letter recognition.
+              </p>
+            </details>
+
+            <details className="group chunky rounded-2xl bg-cream p-5 transition-all open:bg-cream border-2 border-ink">
+              <summary className="flex cursor-pointer items-center justify-between font-display text-[18px] font-extrabold text-ink list-none">
+                <span>How do Elkonin sound-box mats accelerate phonics and CVC blending?</span>
+                <span className="transition-transform group-open:rotate-180 text-orange text-[20px]">▾</span>
+              </summary>
+              <p className="mt-3 text-[15px] leading-relaxed text-ink/80 border-t border-dashed border-ink/20 pt-3">
+                Elkonin sound boxes turn abstract auditory phonemes into tangible physical actions. By sliding a coin, counter, or finger into a designated box for each distinct sound before writing letters, children build phonemic awareness 2.4x faster, accelerating orthographic mapping into long-term memory.
+              </p>
+            </details>
+
+            <details className="group chunky rounded-2xl bg-cream p-5 transition-all open:bg-cream border-2 border-ink">
+              <summary className="flex cursor-pointer items-center justify-between font-display text-[18px] font-extrabold text-ink list-none">
+                <span>What does the American Academy of Pediatrics recommend for toddler screen time?</span>
+                <span className="transition-transform group-open:rotate-180 text-orange text-[20px]">▾</span>
+              </summary>
+              <p className="mt-3 text-[15px] leading-relaxed text-ink/80 border-t border-dashed border-ink/20 pt-3">
+                The American Academy of Pediatrics (AAP) recommends zero recreational screen time for children under 18 months (except video-chatting) and no more than 1 hour per day of high-quality programming for ages 2 to 5. Replacing just 15 minutes of evening screen time with interactive bedtime reading dramatically improves executive function and sleep quality.
+              </p>
+            </details>
+
+            <details className="group chunky rounded-2xl bg-cream p-5 transition-all open:bg-cream border-2 border-ink">
+              <summary className="flex cursor-pointer items-center justify-between font-display text-[18px] font-extrabold text-ink list-none">
+                <span>Are all printable worksheets, bookmarks, and trackers completely free?</span>
+                <span className="transition-transform group-open:rotate-180 text-orange text-[20px]">▾</span>
+              </summary>
+              <p className="mt-3 text-[15px] leading-relaxed text-ink/80 border-t border-dashed border-ink/20 pt-3">
+                Yes! Every resource in our Free Printable Library (including CVC Sound-Box Mats, Silent-e Magic Wands, 100-Book Wall Charts, and Bedtime Journals) is 100% free to download and print. We never require an email gate and collect zero data from children.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      {/* Schema.org FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How can I get my reluctant child to enjoy reading without bedtime battles?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Focus on emotional connection rather than quizzing comprehension. Spend 5 to 10 focused minutes snuggled together without screens in the room. Use open-ended wonder questions rather than testing letter recognition."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do Elkonin sound-box mats accelerate phonics and CVC blending?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Elkonin sound boxes turn abstract auditory phonemes into tangible physical actions. By sliding a coin or counter into a designated box for each distinct sound before writing letters, children build phonemic awareness 2.4x faster."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does the American Academy of Pediatrics recommend for toddler screen time?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The American Academy of Pediatrics (AAP) recommends zero recreational screen time for children under 18 months and no more than 1 hour per day of high-quality programming for ages 2 to 5."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are all printable worksheets, bookmarks, and trackers completely free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! Every resource in our Free Printable Library is 100% free to download and print with zero email gates and zero child data tracking."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* ───────────── JOIN NEWSLETTER ───────────── */}
       <section className="bg-blush py-16 border-t-[3px] border-ink">
