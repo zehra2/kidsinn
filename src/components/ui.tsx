@@ -152,14 +152,6 @@ export function Nav() {
       ],
     },
     {
-      label: "Reels Lab",
-      href: "/reels",
-      items: [
-        { title: "30-Day Video Studio", desc: "Host & mascot micro-learning reels", href: "/reels", icon: Video },
-        { title: "AI Video Prompt Lab", desc: "Ready-to-use production prompts", href: "/reels#prompts", icon: Sparkles },
-      ],
-    },
-    {
       label: "Courses",
       href: "/courses",
       items: [
@@ -788,7 +780,7 @@ export function Footer() {
               <li><Link href="/parent-tools#screen-time" className="text-[14.5px] text-cream/85 hover:text-honey">Screen Time Calculator</Link></li>
               <li><Link href="/parent-tools#million-words" className="text-[14.5px] text-cream/85 hover:text-honey">Million-Word Calculator</Link></li>
               <li><Link href="/parent-tools#questions" className="text-[14.5px] text-cream/85 hover:text-honey">After-Story Prompts</Link></li>
-              <li><Link href="/reels" className="text-[14.5px] text-cream/85 hover:text-honey">Reels & Prompt Studio</Link></li>
+              <li><Link href="/parent-tools#bedtime" className="text-[14.5px] text-cream/85 hover:text-honey">Bedtime Story Matcher</Link></li>
             </ul>
           </div>
 

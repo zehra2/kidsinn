@@ -302,11 +302,11 @@ export default function PlansPage() {
 
                   <div className="pt-2">
                     <Link
-                      href="/reels"
-                      className="btn w-full justify-center bg-blue text-cream text-[14px]"
+                      href="/printables"
+                      className="btn w-full justify-center bg-orange text-cream text-[14px]"
                     >
-                      <Sparkles size={16} />
-                      View AI Video Prompt for Day {activeDay.day}
+                      <Download size={16} />
+                      Get Free Worksheet for Day {activeDay.day}
                     </Link>
                   </div>
                 </div>
