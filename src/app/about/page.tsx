@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Nav, Footer, SectionHead, Sticker, Wave } from "@/components/ui";
+import { Nav, Footer, SectionHead, Sticker, Wave, InstagramIcon } from "@/components/ui";
 import { EEAT_CREDENTIALS } from "@/lib/consolidated-data";
 import {
   ShieldCheck,
@@ -177,6 +177,33 @@ export default function AboutPage() {
                 We do not sell sponsored placement to publishers. Books earn a spot on our shelf solely based on kid feedback and literacy merit.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────── COMMUNITY & INSTAGRAM ───────────── */}
+      <section className="bg-paper py-14 border-t-[3px] border-ink">
+        <div className="mx-auto max-w-[800px] px-4 text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-cream px-3.5 py-1 text-[12px] font-extrabold text-ink shadow-[2px_2px_0px_0px_#181a20] mb-3">
+            <InstagramIcon size={14} className="text-[#E1306C]" />
+            <span>Join Our Parent Community on Instagram</span>
+          </div>
+          <h2 className="text-[32px] md:text-[40px] leading-tight">
+            Follow @best.kidsbooks
+          </h2>
+          <p className="mt-3 text-[16.5px] text-ink/80 max-w-[52ch] mx-auto">
+            60-second micro-phonics sound games, bedtime picture book discussions, and printable announcements for your family reading nook.
+          </p>
+          <div className="mt-6">
+            <a
+              href="https://www.instagram.com/best.kidsbooks/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn bg-orange text-cream text-[15px] inline-flex items-center gap-2 shadow-[3px_3px_0px_0px_#181a20]"
+            >
+              <InstagramIcon size={16} />
+              Visit @best.kidsbooks on Instagram
+            </a>
           </div>
         </div>
       </section>

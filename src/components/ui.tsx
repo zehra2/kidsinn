@@ -24,6 +24,26 @@ import {
   Compass,
 } from "lucide-react";
 
+export function InstagramIcon({ className = "w-4 h-4", size = 16 }: { className?: string; size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
 /* ───────────────────────── brand mark & logo ───────────────────────── */
 export function Logo({ className = "h-12 w-12" }: { className?: string }) {
   return (
@@ -165,10 +185,21 @@ export function Nav() {
     <header className="sticky top-0 z-50 border-b-[3px] border-ink bg-cream/95 backdrop-blur-md">
       {/* Top micro-bar */}
       <div className="border-b-2 border-ink/10 bg-honey/30 px-4 py-1 text-center text-[12px] font-bold text-ink">
-        <span className="inline-flex items-center gap-1.5">
-          <Sparkles size={13} className="text-orange" />
-          <span>Evidence-based pediatric literacy · Free tools, reading plans & printables · No subscription required</span>
-        </span>
+        <div className="mx-auto flex max-w-[1260px] items-center justify-between">
+          <span className="inline-flex items-center gap-1.5">
+            <Sparkles size={13} className="text-orange" />
+            <span>Evidence-based pediatric literacy · Free tools, reading plans & printables · No subscription</span>
+          </span>
+          <a
+            href="https://www.instagram.com/best.kidsbooks/?hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-1.5 font-display text-[12px] font-extrabold text-ink/80 hover:text-orange transition-colors"
+          >
+            <InstagramIcon size={13} className="text-orange" />
+            <span>@best.kidsbooks</span>
+          </a>
+        </div>
       </div>
 
       <div className="mx-auto flex max-w-[1260px] items-center justify-between gap-3 px-4 py-2.5 md:px-8">
@@ -745,6 +776,30 @@ export function Footer() {
               <span className="mono-label rounded-full border border-cream/40 px-2 py-0.5 text-[9.5px] text-cream/80">
                 Zero Child Data
               </span>
+            </div>
+
+            {/* Social Handles */}
+            <div className="mt-5 flex flex-wrap items-center gap-2.5">
+              <a
+                href="https://www.instagram.com/best.kidsbooks/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="chunky-sm press inline-flex items-center gap-2 rounded-full border-2 border-ink bg-paper px-3 py-1.5 text-[12.5px] font-extrabold text-ink transition-transform hover:scale-105 hover:bg-honey"
+                title="Follow BEST KidSbooks on Instagram"
+              >
+                <InstagramIcon size={15} className="text-[#E1306C]" />
+                <span>@best.kidsbooks</span>
+              </a>
+              <a
+                href="https://www.pinterest.com/bestkidbooks"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="chunky-sm press inline-flex items-center gap-1.5 rounded-full border-2 border-ink bg-paper px-3 py-1.5 text-[12.5px] font-extrabold text-ink transition-transform hover:scale-105 hover:bg-honey"
+                title="Pinterest Community"
+              >
+                <span className="font-serif font-black text-[#E60023]">P</span>
+                <span>Pinterest</span>
+              </a>
             </div>
           </div>
 
