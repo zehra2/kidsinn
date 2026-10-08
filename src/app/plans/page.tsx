@@ -111,13 +111,14 @@ export default function PlansPage() {
                   Start Day 1 Now
                   <ArrowRight size={16} />
                 </a>
-                <Link
-                  href="/printables#kit"
+                <a
+                  href="/downloads/plans/30-day-reading-habit-tracker.svg"
+                  download
                   className="btn bg-paper"
                 >
                   <Download size={16} />
-                  Download Printable Chart
-                </Link>
+                  Download 30-Day Tracker (SVG/PDF)
+                </a>
               </div>
             </div>
 
@@ -328,13 +329,14 @@ export default function PlansPage() {
               When your child finishes the 30 days, present them with our official personalized Reading Champion Certificate. Print on heavy paper and frame on their bedroom wall!
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Link
-                href="/api/reading-kit?minutes=10&goal=confidence"
+              <a
+                href="/downloads/printables/reading-champion-certificate.svg"
+                download
                 className="btn bg-orange text-cream"
               >
                 <Download size={16} />
-                Download Champion Certificate (PDF/SVG)
-              </Link>
+                Download Champion Certificate (SVG/PDF)
+              </a>
               <Link
                 href="/journals"
                 className="btn bg-cream text-ink"

@@ -398,9 +398,11 @@ export default function Home() {
                       {b.age}
                     </span>
                   </div>
-                  <h3 className="mt-3 text-[25px] font-extrabold leading-tight text-cream">
-                    {b.title}
-                  </h3>
+                  <Link href={`/books/${b.id}`}>
+                    <h3 className="mt-3 text-[25px] font-extrabold leading-tight text-cream hover:underline">
+                      {b.title}
+                    </h3>
+                  </Link>
                   <div className="mt-2 flex items-center gap-1.5 text-[12px] font-extrabold text-cream/90">
                     <Clock size={13} />
                     <span>{b.minutes} min read-aloud</span>
@@ -421,7 +423,16 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <div className="mt-auto flex items-center justify-between pt-5 border-t border-ink/10">
+                  <div className="mt-4 pt-3 border-t border-dashed border-ink/20">
+                    <Link
+                      href={`/books/${b.id}`}
+                      className="text-[13px] font-extrabold text-orange hover:underline flex items-center gap-1"
+                    >
+                      Read Companion Discussion Guide →
+                    </Link>
+                  </div>
+
+                  <div className="mt-auto flex items-center justify-between pt-4 border-t border-ink/10">
                     <span className="num font-display text-[24px] font-extrabold">
                       {b.price}
                     </span>
@@ -429,7 +440,7 @@ export default function Home() {
                       href="https://bestkidbooks.online/shop"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="chunky-sm press rounded-full bg-honey px-4 py-2 font-display text-[15px] font-bold"
+                      className="chunky-sm press rounded-full bg-honey px-4 py-2 font-display text-[15px] font-bold hover:bg-orange hover:text-cream transition-colors"
                     >
                       Buy the book
                     </a>

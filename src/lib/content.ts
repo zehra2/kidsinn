@@ -50,6 +50,7 @@ export const SOURCES: Source[] = [
 
 /* ──────────────────────────── SHELF ──────────────────────────── */
 export type Book = {
+  id: string;
   title: string;
   tag: string;
   age: string;
@@ -63,6 +64,7 @@ export type Book = {
 
 export const BOOKS: Book[] = [
   {
+    id: "fox-wakes-the-sun",
     title: "Fox Wakes the Sun",
     tag: "Best seller",
     age: "Ages 3–5",
@@ -79,6 +81,7 @@ export const BOOKS: Book[] = [
     tint: "bg-orange",
   },
   {
+    id: "whale-who-forgot-the-sea",
     title: "Whale Who Forgot the Sea",
     tag: "Classroom pick",
     age: "Ages 4–6",
@@ -95,6 +98,7 @@ export const BOOKS: Book[] = [
     tint: "bg-blue-soft",
   },
   {
+    id: "mango-the-moon-cat",
     title: "Mango the Moon Cat",
     tag: "New",
     age: "Ages 5–7",

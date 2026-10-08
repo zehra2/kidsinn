@@ -14,6 +14,11 @@ export type Book = {
   format: string;
   tint: string;
   parentNote?: string;
+  downloadUrl: string;
+  printableSvgPath: string;
+  pedagogicalFocus: string;
+  vocabularyWords: string[];
+  dialogicGuide: { before: string; during: string; after: string };
 };
 
 export const ALL_BOOKS: Book[] = [
@@ -27,6 +32,15 @@ export const ALL_BOOKS: Book[] = [
     minutes: 8,
     price: "$12.99",
     blurb: "A fox who refuses to wait for morning. Built for the 7am negotiation every parent knows.",
+    downloadUrl: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    printableSvgPath: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    pedagogicalFocus: "Routines, morning negotiations, patient waiting, and humor during transitions.",
+    vocabularyWords: ["impatient", "horizon", "glisten"],
+    dialogicGuide: {
+      before: "Look at the cover: Why do you think Fox is awake when the sky is still dark blue?",
+      during: "What do you think the sun is going to say when Fox roars his wake-up call?",
+      after: "If you were Fox, what bedtime snack would you offer the sun so it rises happily?"
+    },
     questions: [
       "What would you do if the sun refused to wake up?",
       "Is Fox impatient, or is he being clever? How can you tell?",
@@ -48,6 +62,15 @@ export const ALL_BOOKS: Book[] = [
     minutes: 10,
     price: "$14.99",
     blurb: "A big blue whale, a small worry, and the tide that keeps turning up on time.",
+    downloadUrl: "/downloads/books/whale-who-forgot-the-sea-guide.svg",
+    printableSvgPath: "/downloads/books/whale-who-forgot-the-sea-guide.svg",
+    pedagogicalFocus: "Emotional regulation, grounding techniques, easing bedtime worry, and trusting life's rhythms.",
+    vocabularyWords: ["current", "tide", "reassure"],
+    dialogicGuide: {
+      before: "How do you think a gigantic creature like a whale can feel small inside?",
+      during: "Look at Whale's eyes when the water recedes. How can we tell he feels worried?",
+      after: "What is something that always comes back, just like the evening tide?"
+    },
     questions: [
       "When did you last forget something important?",
       "Who helps Whale remember — and how?",
@@ -69,6 +92,15 @@ export const ALL_BOOKS: Book[] = [
     minutes: 12,
     price: "$13.50",
     blurb: "Mango climbs to the moon to count the stars, and loses track of exactly one.",
+    downloadUrl: "/downloads/books/mango-the-moon-cat-guide.svg",
+    printableSvgPath: "/downloads/books/mango-the-moon-cat-guide.svg",
+    pedagogicalFocus: "Astronomy curiosity, counting volume, observational persistence, and cozy nighttime wonder.",
+    vocabularyWords: ["constellation", "luminous", "prowl"],
+    dialogicGuide: {
+      before: "If you could climb a ladder to the moon like Mango, what would you pack in your backpack?",
+      during: "Can you help Mango count the bright stars in the Big Dipper on this page?",
+      after: "Why did the last star feel special even though it was tiny?"
+    },
     questions: [
       "How many stars can you count on this page?",
       "Why does Mango go up instead of out?",
@@ -90,6 +122,15 @@ export const ALL_BOOKS: Book[] = [
     minutes: 6,
     price: "$15.99",
     blurb: "When something sad happens, all the animals offer advice, but only the rabbit simply sits and listens.",
+    downloadUrl: "/downloads/books/the-rabbit-listened-guide.svg",
+    printableSvgPath: "/downloads/books/the-rabbit-listened-guide.svg",
+    pedagogicalFocus: "Active listening, companion empathy, holding space for grief, and emotional co-regulation.",
+    vocabularyWords: ["shattered", "sympathy", "companion"],
+    dialogicGuide: {
+      before: "Have you ever built something tall that accidentally fell down? How did it feel?",
+      during: "Bear wanted to roar and Snake wanted to knock things down. Did that help Taylor?",
+      after: "How did Rabbit make Taylor feel safe without saying a single word?"
+    },
     questions: [
       "Which animal tried to make Taylor feel better first?",
       "What did the rabbit do that made Taylor feel safe?",
@@ -111,6 +152,15 @@ export const ALL_BOOKS: Book[] = [
     minutes: 9,
     price: "$13.99",
     blurb: "Turns the grown-up into the entertainment! Every single word must be read out loud, no matter how ridiculous.",
+    downloadUrl: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    printableSvgPath: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    pedagogicalFocus: "Orthographic-to-phonological decoding joy, linguistic absurdism, and parent-child bonding through shared laughter.",
+    vocabularyWords: ["ridiculous", "obligation", "preposterous"],
+    dialogicGuide: {
+      before: "Can a book without any pictures still be funny? Let's make a bet!",
+      during: "Listen closely — what silly sound do you want me to read with an opera singer voice?",
+      after: "Which made-up word was your absolute favorite to hear?"
+    },
     questions: [
       "Which silly sound was the hardest for me to say?",
       "Why does a book without pictures still make us laugh?",
@@ -132,6 +182,15 @@ export const ALL_BOOKS: Book[] = [
     minutes: 7,
     price: "$14.99",
     blurb: "Jabari is definitely ready to jump off the high diving board... or is he? A gentle story about being brave.",
+    downloadUrl: "/downloads/books/whale-who-forgot-the-sea-guide.svg",
+    printableSvgPath: "/downloads/books/whale-who-forgot-the-sea-guide.svg",
+    pedagogicalFocus: "Somatic anxiety awareness, father-son emotional support, deep breathing, and self-paced courage.",
+    vocabularyWords: ["determined", "anticipation", "exhilarating"],
+    dialogicGuide: {
+      before: "Look how tall that ladder is! Have you ever stood at the top of something very high?",
+      during: "What did Jabari's dad squeeze into his hand to remind him it's okay to feel nervous?",
+      after: "When is a time you felt scared first, but proud after trying?"
+    },
     questions: [
       "How did Jabari's tummy feel before he climbed up?",
       "What did his dad whisper to him?",
@@ -153,6 +212,15 @@ export const ALL_BOOKS: Book[] = [
     minutes: 12,
     price: "$16.99",
     blurb: "Curious Ada has all the questions. Why does it tick? Why does it smell? A rhythmic celebration of curiosity.",
+    downloadUrl: "/downloads/books/mango-the-moon-cat-guide.svg",
+    printableSvgPath: "/downloads/books/mango-the-moon-cat-guide.svg",
+    pedagogicalFocus: "The scientific method, hypothesis generation, persistence through failure, and rich rhyming cadence.",
+    vocabularyWords: ["hypothesis", "investigate", "chaos"],
+    dialogicGuide: {
+      before: "Why do you think Ada fills entire walls with question marks?",
+      during: "What is Ada's plan to figure out where that pungent mystery smell came from?",
+      after: "What is a mystery around our house you want to investigate tomorrow?"
+    },
     questions: [
       "What mystery was Ada trying to solve?",
       "What does Ada do when an experiment fails?",
@@ -174,6 +242,15 @@ export const ALL_BOOKS: Book[] = [
     minutes: 20,
     price: "$6.99",
     blurb: "Jack and Annie discover a tree house filled with books that whisks them back to prehistoric times.",
+    downloadUrl: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    printableSvgPath: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    pedagogicalFocus: "Transitioning to early chapter books, dual protagonist dynamics, and taking observational notes.",
+    vocabularyWords: ["prehistoric", "crest", "fossil"],
+    dialogicGuide: {
+      before: "If you found a secret tree house with magical books, which era would you wish to visit?",
+      during: "How did Jack use his notebook to stay safe when the Pteranodon flew over?",
+      after: "Would you rather be cautious like Jack or brave and impulsive like Annie?"
+    },
     questions: [
       "Which dinosaur did Jack and Annie meet first?",
       "How did Jack use his notebook to stay safe?",
@@ -195,6 +272,15 @@ export const ALL_BOOKS: Book[] = [
     minutes: 25,
     price: "$12.99",
     blurb: "Part dog, part policeman, all hero! Visual storytelling packed with empathy, humor, and flip-o-ramas.",
+    downloadUrl: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    printableSvgPath: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    pedagogicalFocus: "Visual literacy, multimodal inference, redemption arcs, and comic book creation.",
+    vocabularyWords: ["redemption", "clone", "villainous"],
+    dialogicGuide: {
+      before: "Look at the comic panels. How do the sound bubbles make the action feel fast?",
+      during: "How does Li'l Petey's sweet kindness start to change Petey's grumpy heart?",
+      after: "Why is graphic novel reading so good for exercising our imagination muscles?"
+    },
     questions: [
       "How does Li'l Petey help Petey become a better dad?",
       "What visual clue told you what Dog Man was feeling?",
@@ -271,7 +357,13 @@ export type PrintableItem = {
   description: string;
   color: string;
   downloadUrl: string;
+  printableSvgPath: string;
   features: string[];
+  pedagogyReason: string;
+  parentGuideSteps: { step: string; title: string; desc: string }[];
+  classroomTips: string;
+  materialsNeeded: string[];
+  targetWords?: string[];
 };
 
 export const PRINTABLES: PrintableItem[] = [
@@ -283,8 +375,18 @@ export const PRINTABLES: PrintableItem[] = [
     pages: 2,
     description: "Customizable 7-day family tracker with 7 thoughtful conversation prompts to ask after bedtime stories.",
     color: "bg-[#ffc531]",
-    downloadUrl: "/api/reading-kit?minutes=10&goal=connection",
-    features: ["A4 Printable SVG / PDF", "Zero guilt / no scorekeeping", "Bedtime prompt cards included"],
+    downloadUrl: "/downloads/printables/7-day-reading-kit.svg",
+    printableSvgPath: "/downloads/printables/7-day-reading-kit.svg",
+    features: ["A4 Printable SVG / PDF ready", "Zero guilt / no scorekeeping", "Bedtime prompt cards included", "Mascot sticker stamps"],
+    pedagogyReason: "Habit formation research (Fogg Behavior Model) proves that tying a tiny reading session to an existing bedtime routine builds lifelong reader identity faster than high-pressure page quotas.",
+    parentGuideSteps: [
+      { step: "Step 1", title: "Tape to the Bedside or Fridge", desc: "Keep the tracker visible at eye level for your child so they anticipate story time." },
+      { step: "Step 2", title: "Read for 5 to 10 Focused Minutes", desc: "Put phones in another room. Focus purely on connection, tone of voice, and laughter." },
+      { step: "Step 3", title: "Ask the Daily Joy Spark", desc: "Use the prompt on the sheet (e.g. 'What made you smile?') instead of quizzing comprehension." },
+      { step: "Step 4", title: "Color the Day's Mascot Badge", desc: "Let your child color or stamp the mascot box to celebrate the micro-win." }
+    ],
+    classroomTips: "Distribute on Monday for a home-school reading bridge. Instruct parents that rereading the same favorite picture book 7 times is celebrated.",
+    materialsNeeded: ["Crayons or markers", "Tape or fridge magnet", "A cozy book"]
   },
   {
     id: "cvc-sound-box-mats",
@@ -294,8 +396,19 @@ export const PRINTABLES: PrintableItem[] = [
     pages: 6,
     description: "Multi-sensory Elkonin sound boxes for tap-and-blend phonics practice with short a, e, i, o, u words.",
     color: "bg-[#5b8def]",
-    downloadUrl: "/api/reading-kit?minutes=10&goal=confidence",
-    features: ["Visual phoneme boxes", "Word lists included", "Reusable with dry-erase sleeves"],
+    downloadUrl: "/downloads/printables/cvc-sound-box-mats.svg",
+    printableSvgPath: "/downloads/printables/cvc-sound-box-mats.svg",
+    features: ["Visual 3-part phoneme boxes", "Word lists included for all 5 short vowels", "Reusable with dry-erase sleeves", "Official Mascot Reading Bear logo"],
+    pedagogyReason: "Elkonin sound-box research indicates that physically moving counters into segment boxes before writing letters accelerates phonemic awareness and orthographic mapping by up to 2.4x.",
+    parentGuideSteps: [
+      { step: "Step 1", title: "Say the Word Slowly", desc: "Pronounce 'c-a-t' stretching each sound: /k/ ... /ă/ ... /t/." },
+      { step: "Step 2", title: "Push the Counters", desc: "Have your child push a coin, button, or finger into each box as they voice each sound." },
+      { step: "Step 3", title: "Sweep & Blend", desc: "Slide a finger along the bottom arrow from left to right to blend the word smoothly together: 'cat!'" },
+      { step: "Step 4", title: "Write the Letters", desc: "If ready, have child write the grapheme letter inside each box using a dry-erase marker." }
+    ],
+    classroomTips: "Use during small-group Tier 1 and Tier 2 phonics interventions. Provide tactile counters like playdough balls that kids squash for each phoneme.",
+    materialsNeeded: ["Printable mat", "3 counters (coins, buttons, or playdough balls)", "Dry erase pocket sleeve", "Dry erase marker"],
+    targetWords: ["cat", "map", "bed", "hen", "pig", "sit", "dog", "fox", "sun", "cup", "bat", "hot"]
   },
   {
     id: "silent-e-magic-wands",
@@ -305,8 +418,19 @@ export const PRINTABLES: PrintableItem[] = [
     pages: 4,
     description: "Cut-out magic e wands that children slide over CVC words to reveal the long-vowel word (cap → cape).",
     color: "bg-[#ff8fb1]",
-    downloadUrl: "/api/reading-kit?minutes=15&goal=confidence",
-    features: ["Hands-on tactile learning", "24 transformation pairs", "Illustrated hints"],
+    downloadUrl: "/downloads/printables/silent-e-magic-wands.svg",
+    printableSvgPath: "/downloads/printables/silent-e-magic-wands.svg",
+    features: ["Hands-on tactile magic wand cut-outs", "24 transformation pairs included", "Illustrated visual hints", "Standard Letter / A4 format"],
+    pedagogyReason: "Kinesthetic manipulation of final 'e' turns an abstract spelling rule into a concrete visual cause-and-effect action, cementing the long vowel rule.",
+    parentGuideSteps: [
+      { step: "Step 1", title: "Cut Out the Magic Wand", desc: "Cut along the dotted line on the star wand. Glue onto a popsicle stick or pencil." },
+      { step: "Step 2", title: "Read the Short Vowel Word", desc: "Show 'CAP'. Have your child read the short-a sound." },
+      { step: "Step 3", title: "Wave the Magic Wand", desc: "Tap the end of the word with the wand 'E'! Explain that magic 'e' stays quiet and tells 'a' to say its own name." },
+      { step: "Step 4", title: "Read the Long Vowel Word", desc: "Read the newly transformed word: 'CAPE'!" }
+    ],
+    classroomTips: "Have students take turns acting as the 'Vowel Magician' in pairs. Great for centers and phonics workstations.",
+    materialsNeeded: ["Scissors", "Popsicle stick or straw (optional)", "Glue stick", "Printable cards"],
+    targetWords: ["cap → cape", "tap → tape", "pin → pine", "kit → kite", "hop → hope", "rob → robe", "cub → cube", "tub → tube"]
   },
   {
     id: "100-book-reading-tree",
@@ -316,8 +440,18 @@ export const PRINTABLES: PrintableItem[] = [
     pages: 1,
     description: "Color a leaf or apple for every book read aloud. Celebrates volume and rereads without pressure.",
     color: "bg-[#6ecf9b]",
-    downloadUrl: "/api/reading-kit?minutes=10&goal=connection",
-    features: ["Poster size 11x17 or A3", "100 leaf milestones", "Celebration stickers sheet"],
+    downloadUrl: "/downloads/printables/100-book-reading-tree.svg",
+    printableSvgPath: "/downloads/printables/100-book-reading-tree.svg",
+    features: ["Poster size ready (8.5x11, 11x17, A4, A3)", "100 leaf milestones with numbered badges", "Celebration star canopy", "Zero competition / intrinsic pride"],
+    pedagogyReason: "According to Ohio State University literacy studies, reading 100 books introduces over 300,000 spoken words. Visual trackers provide positive dopamine reinforcement for persistent habits.",
+    parentGuideSteps: [
+      { step: "Step 1", title: "Hang in Reading Nook", desc: "Place on the wall where your child sits for bedtime reading." },
+      { step: "Step 2", title: "Color After Every Story", desc: "Let child choose their favorite color for tonight's leaf." },
+      { step: "Step 3", title: "Rereads Count!", desc: "Remind child that reading their favorite story 5 times fills 5 leaves." },
+      { step: "Step 4", title: "Milestone High Fives", desc: "Celebrate at 25, 50, 75, and 100 books with a special bedtime dance or library trip." }
+    ],
+    classroomTips: "Print one large tree for the classroom door or individual mini-trees for student take-home reading folders.",
+    materialsNeeded: ["Crayons, colored pencils, or star stickers", "Poster wall putty or tape"]
   },
   {
     id: "animal-friend-bookmarks",
@@ -327,8 +461,18 @@ export const PRINTABLES: PrintableItem[] = [
     pages: 2,
     description: "Four printable bookmarks featuring Fox, Whale, Moon Cat, and Reading Bear with reading tips.",
     color: "bg-[#ff3b1f]",
-    downloadUrl: "/api/reading-kit?minutes=5&goal=calm",
-    features: ["Heavy cardstock friendly", "Includes 'I finished this book!' line", "Fine motor skill coloring"],
+    downloadUrl: "/downloads/printables/animal-friend-bookmarks.svg",
+    printableSvgPath: "/downloads/printables/animal-friend-bookmarks.svg",
+    features: ["Heavy cardstock friendly", "Includes 'I finished this book!' back panel", "Fine motor skill coloring borders", "Ribbon tassel punch hole"],
+    pedagogyReason: "Allowing children to personalize their reading artifacts creates emotional ownership over their books and encourages independent bookmarking.",
+    parentGuideSteps: [
+      { step: "Step 1", title: "Color the Animal Friend", desc: "Let child color Fox, Whale, Moon Cat, or Reading Bear." },
+      { step: "Step 2", title: "Cut Along Dotted Lines", desc: "Practice fine motor scissor skills cutting out the rectangular strips." },
+      { step: "Step 3", title: "Punch Hole & Thread Ribbon", desc: "Punch the top circle and tie a scrap piece of yarn or ribbon." },
+      { step: "Step 4", title: "Mark Tonight's Page", desc: "Place inside tonight's bedtime book to mark the adventure." }
+    ],
+    classroomTips: "Laminate after coloring for long-lasting student rewards during library checkout day.",
+    materialsNeeded: ["Cardstock paper", "Markers or crayons", "Scissors", "Single hole punch and yarn (optional)"]
   },
   {
     id: "digraph-detective-hunt",
@@ -338,8 +482,19 @@ export const PRINTABLES: PrintableItem[] = [
     pages: 3,
     description: "A fun picture-search printable where little detectives search for objects hiding digraph sounds.",
     color: "bg-[#a8c4ff]",
-    downloadUrl: "/api/reading-kit?minutes=10&goal=confidence",
-    features: ["I-Spy style visual hunt", "Answer keys included", "Great for independent practice"],
+    downloadUrl: "/downloads/printables/digraph-detective-hunt.svg",
+    printableSvgPath: "/downloads/printables/digraph-detective-hunt.svg",
+    features: ["I-Spy style visual detective hunt", "Covers sh, ch, th, wh sounds", "Detective magnifying glass badges", "Clear answer keys included"],
+    pedagogyReason: "Phoneme isolation through contextual imagery helps young brains differentiate digraphs (two letters making one brand new phoneme) from consonant blends.",
+    parentGuideSteps: [
+      { step: "Step 1", title: "Put on the Detective Hat", desc: "Tell your child they are a Sound Detective hunting for hidden digraph clues." },
+      { step: "Step 2", title: "Review the 4 Clue Sounds", desc: "/sh/ quiet sound, /ch/ train sound, /th/ tongue-tap sound, /wh/ breeze sound." },
+      { step: "Step 3", title: "Find & Circle", desc: "Locate the ship, chin, thumb, and whale in the detective scene." },
+      { step: "Step 4", title: "Write the Clue Letters", desc: "Write the corresponding digraph under each found clue." }
+    ],
+    classroomTips: "Pair students up with clipboards and pretend magnifying glasses for an engaging literacy station.",
+    materialsNeeded: ["Highlighter or colored pencil", "Printable detective sheet"],
+    targetWords: ["ship", "shoe", "fish", "chip", "chair", "thumb", "three", "whale", "wheel", "whistle"]
   },
   {
     id: "reading-champion-certificate",
@@ -349,9 +504,19 @@ export const PRINTABLES: PrintableItem[] = [
     pages: 1,
     description: "A keepsake certificate honoring your child's curiosity, listening, and 30 days of reading moments.",
     color: "bg-[#ffc531]",
-    downloadUrl: "/api/reading-kit?minutes=10&goal=confidence",
-    features: ["Official seal & signature line", "Keepsake quality", "Fosters intrinsic pride"],
-  },
+    downloadUrl: "/downloads/printables/reading-champion-certificate.svg",
+    printableSvgPath: "/downloads/printables/reading-champion-certificate.svg",
+    features: ["Official BEST KidSbooks seal & signature line", "Keepsake quality border", "Promotes intrinsic growth mindset", "Fillable recipient and date lines"],
+    pedagogyReason: "Celebrating effort, consistency, and curiosity over test scores reinforces Carol Dweck's growth mindset and solidifies long-term intrinsic motivation.",
+    parentGuideSteps: [
+      { step: "Step 1", title: "Write Child's Name Proudly", desc: "Use a nice pen to write your child's name in the banner." },
+      { step: "Step 2", title: "Host a Bedtime Ceremony", desc: "Present the certificate after reading story #30 with family applause." },
+      { step: "Step 3", title: "Sign Together", desc: "Have parent and child both sign the reader pledge." },
+      { step: "Step 4", title: "Frame or Display", desc: "Mount on the bedroom wall or refrigerator as an enduring badge of achievement." }
+    ],
+    classroomTips: "Present during classroom end-of-month reading circles to celebrate every student's growth.",
+    materialsNeeded: ["Heavy paper or cardstock", "Gold or colored pen for personalization"]
+  }
 ];
 
 /* ──────────────────────── JOURNALS COLLECTION ──────────────────────── */
@@ -363,8 +528,13 @@ export type JournalItem = {
   color: string;
   tag: string;
   description: string;
+  downloadUrl: string;
+  printableSvgPath: string;
   highlights: string[];
   samplePrompts: string[];
+  researchInsight: string;
+  dailyRoutine: { step: string; title: string; desc: string }[];
+  journalSections: string[];
 };
 
 export const JOURNALS: JournalItem[] = [
@@ -375,18 +545,28 @@ export const JOURNALS: JournalItem[] = [
     age: "Ages 3–7",
     color: "bg-[#5b8def]",
     tag: "Parent Favorite",
+    downloadUrl: "/downloads/journals/bedtime-connection-journal.svg",
+    printableSvgPath: "/downloads/journals/bedtime-connection-journal.svg",
     description: "Rather than asking 'What was the story about?', this journal asks questions that connect the book's heart to your child's real day.",
     highlights: [
       "Guided after-reading prompts that spark real conversations",
       "Space for a child's doodle or favorite character rating",
       "Creates a cherished family keepsake of their early years",
-      "Zero prep — takes just 3 to 5 minutes before lights out",
+      "Zero prep — takes just 3 to 5 minutes before lights out"
     ],
     samplePrompts: [
       "“If you could jump into the book tonight, which page would you sleep on?”",
       "“What was the bravest thing anyone did in tonight's story?”",
       "“Did anyone in the story feel like you felt earlier today?”",
+      "“If we could invite one character to breakfast tomorrow, who would you pick?”"
     ],
+    researchInsight: "Child psychology research at Harvard Center on the Developing Child shows that interactive 'serve-and-return' conversations after bedtime stories lower cortisol levels and dramatically improve emotional co-regulation.",
+    dailyRoutine: [
+      { step: "Minute 1-5", title: "Read Story Together", desc: "Snuggle up and read without phone distractions." },
+      { step: "Minute 6", title: "Ask Tonight's Connection Spark", desc: "Pick one prompt from the journal entry." },
+      { step: "Minute 7-8", title: "Doodle & Star Rating", desc: "Let child color the sleeping bear rating and add a tiny doodle." }
+    ],
+    journalSections: ["Tonight's Story Title & Author", "Curiosity Spark Question", "Child's Doodle Box", "5-Bear Giggle Rating", "Parent's 1-Line Memory Note"]
   },
   {
     id: "100-book-explorer-log",
@@ -395,18 +575,28 @@ export const JOURNALS: JournalItem[] = [
     age: "Ages 4–9",
     color: "bg-[#ffc531]",
     tag: "Milestone Tracker",
+    downloadUrl: "/downloads/journals/100-book-explorer-log.svg",
+    printableSvgPath: "/downloads/journals/100-book-explorer-log.svg",
     description: "A vibrant, illustrated book tracker that turns every completed story into a proud badge of honor. Built for rereads, graphic novels, and bedtime favorites.",
     highlights: [
       "100 numbered story passport stamps to color in",
       "5-star smiling bear rating scale for little critics",
       "Quote bubbles for the funniest line from the book",
-      "Milestone badges at 10, 25, 50, 75, and 100 books",
+      "Milestone badges at 10, 25, 50, 75, and 100 books"
     ],
     samplePrompts: [
       "“Draw the funniest face from this book.”",
       "“Rate this story: 1 to 5 sleeping bears!”",
       "“Which word was the coolest new word we learned?”",
+      "“Would you recommend this book to your best friend? Why?”"
     ],
+    researchInsight: "Tracking milestone progress without punitive grading triggers intrinsic dopamine feedback loops, building strong reader self-efficacy (Bandura Social Cognitive Theory).",
+    dailyRoutine: [
+      { step: "Step 1", title: "Log the Title", desc: "Child or parent writes the book title and author." },
+      { step: "Step 2", title: "Rate with Bear Stars", desc: "Color 1 to 5 smiling bears depending on how much they loved it." },
+      { step: "Step 3", title: "Passport Stamp", desc: "Color in the numbered badge stamp to advance on the 100-book map." }
+    ],
+    journalSections: ["Story Passport Number #1-100", "5-Star Critical Rating", "Best Quote or Silly Sound", "Favorite Character Portrait"]
   },
   {
     id: "feelings-character-journal",
@@ -415,18 +605,28 @@ export const JOURNALS: JournalItem[] = [
     age: "Ages 5–10",
     color: "bg-[#ff8fb1]",
     tag: "Emotional Literacy",
+    downloadUrl: "/downloads/journals/feelings-character-journal.svg",
+    printableSvgPath: "/downloads/journals/feelings-character-journal.svg",
     description: "Developed with child psychologists, this journal uses book characters as gentle mirrors for worry, anger, jealousy, and bravery.",
     highlights: [
       "Feelings wheel with kid-friendly animal expressions",
       "Empathy prompts: 'How would you help Whale feel calm?'",
       "Reduces emotional outbursts by building vocabulary for feelings",
-      "Safe, private reflection space between parent and child",
+      "Safe, private reflection space between parent and child"
     ],
     samplePrompts: [
       "“When Fox got impatient, what helped him wait?”",
       "“Have you ever felt a small worry grow big like Whale's tide?”",
       "“What kind words can we give someone who made a mistake?”",
+      "“Draw what bravery looked like in tonight's chapter.”"
     ],
+    researchInsight: "Dan Siegel's 'Name It to Tame It' neuroscience principle demonstrates that labeling character emotions activates the prefrontal cortex, reducing amygdala reactivity in children facing big emotions.",
+    dailyRoutine: [
+      { step: "Step 1", title: "Identify Character's Emotion", desc: "Find the animal feeling icon that matches how the character felt." },
+      { step: "Step 2", title: "Personal Bridge", desc: "Ask: 'When is a time you felt that same way?'" },
+      { step: "Step 3", title: "Empathy Toolkit", desc: "Write or draw one helpful action to soothe that emotion." }
+    ],
+    journalSections: ["Character Feelings Wheel", "The Conflict & Resolution", "Child's Empathy Bridge", "My Calming Strategy Box"]
   },
   {
     id: "tiny-triumphs-habit-diary",
@@ -435,19 +635,29 @@ export const JOURNALS: JournalItem[] = [
     age: "Ages 3–8",
     color: "bg-[#6ecf9b]",
     tag: "Habit Builder",
-    description: "Designed to accompany the 30-Day Reels Challenge, this daily diary lets kids record sound games, favorite blends, and silly host moments.",
+    downloadUrl: "/downloads/journals/tiny-triumphs-habit-diary.svg",
+    printableSvgPath: "/downloads/journals/tiny-triumphs-habit-diary.svg",
+    description: "Designed to accompany the 30-Day Reading Challenge, this daily diary lets kids record sound games, favorite blends, and silly host moments.",
     highlights: [
       "Day-by-day stickers and streak trackers",
       "Sound-of-the-day doodle box",
       "Weekly challenge scorecards",
-      "Official certificate pocket inside the back cover",
+      "Official certificate pocket inside the back cover"
     ],
     samplePrompts: [
       "“What sound did the bear find today?”",
       "“Draw a picture of a word that rhymes with cat!”",
       "“Today's reading win: we read for ___ minutes!”",
+      "“What was the funniest word we blended today?”"
     ],
-  },
+    researchInsight: "Micro-habit tracking reduces friction and eliminates overwhelm. 5 minutes daily produces 36.5 hours of dedicated 1-on-1 language exposure per year.",
+    dailyRoutine: [
+      { step: "Day Challenge", title: "Play 60-Second Sound Game", desc: "Tap and blend today's phoneme or short vowel." },
+      { step: "Record Win", title: "Check Off Day Badge", desc: "Fill in today's day number from 1 to 30." },
+      { step: "Sound Doodle", title: "Draw the Sound Object", desc: "Draw a quick sketch of the target word." }
+    ],
+    journalSections: ["30-Day Streak Ladder", "Daily Sound Focus Box", "Word Family Tree", "30-Day Victory Wall"]
+  }
 ];
 
 /* ──────────────────────── E-E-A-T EXPERT CITATIONS ──────────────────────── */

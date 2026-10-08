@@ -17,6 +17,7 @@ import {
   FileText,
   Star,
   Layers,
+  BookOpen,
 } from "lucide-react";
 
 export default function PrintablesPage() {
@@ -283,9 +284,11 @@ export default function PrintablesPage() {
                   </span>
                 </div>
 
-                <h3 className="mt-3 font-display text-[22px] font-extrabold leading-tight text-ink">
-                  {item.title}
-                </h3>
+                <Link href={`/printables/${item.id}`}>
+                  <h3 className="mt-3 font-display text-[22px] font-extrabold leading-tight text-ink hover:text-orange transition-colors">
+                    {item.title}
+                  </h3>
+                </Link>
 
                 <p className="mt-2 text-[14px] text-ink/75 leading-relaxed">
                   {item.description}
@@ -301,14 +304,13 @@ export default function PrintablesPage() {
                 </ul>
 
                 <div className="mt-auto pt-6 flex gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setPreviewItem(item)}
-                    className="chunky-sm press flex-1 justify-center rounded-full bg-cream py-2.5 font-display text-[14px] font-bold text-ink flex items-center gap-1.5 hover:bg-honey"
+                  <Link
+                    href={`/printables/${item.id}`}
+                    className="chunky-sm press flex-1 justify-center rounded-full bg-cream py-2.5 font-display text-[14px] font-bold text-ink flex items-center gap-1.5 hover:bg-honey text-center"
                   >
-                    <Eye size={15} />
-                    Preview
-                  </button>
+                    <BookOpen size={15} />
+                    Read & Guide
+                  </Link>
                   <a
                     href={item.downloadUrl}
                     download

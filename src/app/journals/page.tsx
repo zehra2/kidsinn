@@ -153,12 +153,22 @@ export default function JournalsPage() {
                     </p>
 
                     <div className="mt-4 flex items-center justify-between border-t-2 border-dashed border-ink/20 pt-3">
-                      <span className="text-[13px] font-bold text-orange">
-                        {isSelected ? "Previewing below →" : "Tap to inspect prompts"}
-                      </span>
-                      <span className="text-[12px] font-bold text-ink/50 underline">
-                        View features
-                      </span>
+                      <Link
+                        href={`/journals/${j.id}`}
+                        className="text-[13.5px] font-extrabold text-orange hover:underline flex items-center gap-1"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Read Full Guide & Preview →
+                      </Link>
+                      <a
+                        href={j.downloadUrl}
+                        download
+                        onClick={(e) => e.stopPropagation()}
+                        className="btn chunky-sm bg-paper text-ink text-[12px] py-1.5 px-3 hover:bg-honey"
+                      >
+                        <Download size={13} />
+                        Download
+                      </a>
                     </div>
                   </article>
                 );
@@ -210,16 +220,25 @@ export default function JournalsPage() {
                   </div>
 
                   <div className="pt-3 flex flex-col gap-2">
-                    <Link
-                      href="/api/reading-kit?minutes=10&goal=connection"
-                      download
-                      className="btn justify-center bg-orange text-cream text-[15px]"
-                    >
-                      <Download size={16} />
-                      Download Printable Journal Sample (PDF)
-                    </Link>
+                    <div className="flex gap-2">
+                      <Link
+                        href={`/journals/${activeJournal.id}`}
+                        className="btn flex-1 justify-center bg-cream text-ink text-[14.5px]"
+                      >
+                        <BookOpen size={16} />
+                        Read & Inspect
+                      </Link>
+                      <a
+                        href={activeJournal.downloadUrl}
+                        download
+                        className="btn flex-1 justify-center bg-orange text-cream text-[14.5px]"
+                      >
+                        <Download size={16} />
+                        Download PDF/SVG
+                      </a>
+                    </div>
                     <p className="text-center text-[11.5px] text-ink/60">
-                      Standard letter size · Includes 10 free journal entries
+                      Standard letter size · Vector asset ready to print
                     </p>
                   </div>
                 </div>

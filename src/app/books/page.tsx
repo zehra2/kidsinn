@@ -15,6 +15,7 @@ import {
   MessageCircle,
   HelpCircle,
   ShoppingBag,
+  Download,
 } from "lucide-react";
 
 export default function BooksPage() {
@@ -196,9 +197,11 @@ export default function BooksPage() {
                       {b.age}
                     </span>
                   </div>
-                  <h3 className="mt-3 font-display text-[25px] font-extrabold leading-tight text-cream">
-                    {b.title}
-                  </h3>
+                  <Link href={`/books/${b.id}`}>
+                    <h3 className="mt-3 font-display text-[25px] font-extrabold leading-tight text-cream hover:underline">
+                      {b.title}
+                    </h3>
+                  </Link>
                   {b.author && (
                     <p className="text-[13px] font-bold text-cream/90">
                       by {b.author}
@@ -232,11 +235,30 @@ export default function BooksPage() {
                     </p>
                   </div>
 
+                  {/* Action links */}
+                  <div className="mt-4 pt-3 border-t border-dashed border-ink/20 flex gap-2">
+                    <Link
+                      href={`/books/${b.id}`}
+                      className="chunky-sm press flex-1 justify-center rounded-full bg-cream py-2 font-display text-[13px] font-extrabold text-ink flex items-center gap-1 hover:bg-honey text-center"
+                    >
+                      <BookOpen size={14} />
+                      Companion Guide
+                    </Link>
+                    <a
+                      href={b.downloadUrl}
+                      download
+                      className="btn chunky-sm bg-paper text-ink text-[12px] py-1.5 px-3 hover:bg-honey"
+                      title="Download Companion Printable"
+                    >
+                      <Download size={14} />
+                    </a>
+                  </div>
+
                   {/* Price & action */}
-                  <div className="mt-auto pt-6 flex items-center justify-between border-t border-ink/15">
+                  <div className="mt-auto pt-4 flex items-center justify-between border-t border-ink/15">
                     <div>
                       <span className="mono-label text-[10px] text-ink/50 block">Price</span>
-                      <span className="font-display text-[22px] font-extrabold text-ink">
+                      <span className="font-display text-[20px] font-extrabold text-ink">
                         {b.price}
                       </span>
                     </div>
@@ -244,7 +266,7 @@ export default function BooksPage() {
                       href="https://bestkidbooks.online/shop"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn chunky-sm bg-honey text-ink text-[14px] px-4 py-2 hover:bg-orange hover:text-cream"
+                      className="btn chunky-sm bg-orange text-cream text-[13.5px] px-4 py-2 hover:bg-honey hover:text-ink"
                     >
                       <ShoppingBag size={14} />
                       Buy Book
