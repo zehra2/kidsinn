@@ -1,11 +1,12 @@
 import { AdSlot, Footer, JoinForm, Nav, Wave } from "@/components/ui";
 import { Tools } from "@/components/Tools";
+import { AIReadingCoach } from "@/components/AIReadingCoach";
 import { SOURCES } from "@/lib/content";
 
 export const metadata = {
-  title: "Free parent tools — screen time, words, reading goals",
+  title: "Free parent tools — AI Reading Coach, screen time, words, reading goals",
   description:
-    "Four free calculators for parents: screen time minutes by age from AAP and NHS guidance, the million-word gap calculator, a read-aloud goal planner and a printable question bank.",
+    "Free AI early literacy coach and calculators for parents: screen time minutes by age from AAP guidance, the million-word gap calculator, and printable question banks.",
 };
 
 export default function ParentToolsPage() {
@@ -27,18 +28,15 @@ export default function ParentToolsPage() {
                 </span>
               </div>
               <h1 className="mt-4 text-[clamp(2.3rem,7vw,4.6rem)]">
-                Four numbers
+                AI reading coach
                 <br />
-                every parent
+                & four numbers
                 <br />
-                <span className="text-orange-ink">should know.</span>
+                <span className="text-orange-ink">every parent should know.</span>
               </h1>
             </div>
             <p className="text-[17px] leading-relaxed text-ink/85">
-              No sign-up, no email wall, nothing stored about your child. Every
-              figure is computed from published guidance — the AAP and NHS
-              screen-time bands, and the million-word gap study from Ohio State.
-              Move a slider and the answer moves with you.
+              Ask our LLM-powered reading coach for custom routines, or explore our evidence-based AAP & NHS screen-time calculators. Zero sign-up, zero email gates, zero child data stored.
             </p>
           </div>
         </div>
@@ -46,6 +44,10 @@ export default function ParentToolsPage() {
       </section>
 
       <main className="bg-paper pt-8">
+        <div className="mx-auto max-w-[1220px] px-4 md:px-8 mb-12">
+          <AIReadingCoach />
+        </div>
+
         <Tools />
         <div className="mx-auto max-w-[1220px] px-4 md:px-8">
           <AdSlot slot="bestkidbooks-tools" label="Advertisement · adults only" />

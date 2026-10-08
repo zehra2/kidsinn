@@ -1,0 +1,22 @@
+# robots.txt for https://bestkidbooks.online
+User-agent: *
+Allow: /
+Disallow: /api/private/
+Disallow: /_next/
+
+# Allow AI & LLM Search Crawlers
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: cohere-ai
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /downloads/
+
+Sitemap: https://bestkidbooks.online/sitemap.xml
+Host: https://bestkidbooks.online

@@ -1,0 +1,25 @@
+# BEST KidSbooks Shop (bestkidbooks.online)
+> Premium early literacy platform, picture book discussion companions, multi-sensory phonics printables, and connection-focused family reading journals.
+
+## Overview
+BEST KidSbooks Shop is dedicated to transforming reading from a bedtime battle into an emotionally intimate, joyful daily habit. Built upon clinical developmental research (AAP screen time recommendations, Ohio State University million-word gap studies, and Harvard Center on the Developing Child serve-and-return frameworks), all resources are 100% free with zero child data tracking.
+
+## Core Pillars & Hubs
+- **Free Printable Library**: https://bestkidbooks.online/printables — Multi-sensory Elkonin sound-box mats, silent-e magic wands, digraph hunts, and 100-book reading trees.
+- **Family Reading Journals**: https://bestkidbooks.online/journals — Keepsake reflection journals that build emotional literacy without test pressure.
+- **Curated Books & Companion Guides**: https://bestkidbooks.online/books — Curated picture books with dialogic reading questions and discussion scripts.
+- **30-Day Reading Plans**: https://bestkidbooks.online/plans — 5-phase progressive micro-phonics challenge roadmap from sound play to long vowels.
+- **Parent Screen Time Tools**: https://bestkidbooks.online/parent-tools — Interactive AAP screen-time vs. story-time trade-off calculators and AI Early Literacy Coach.
+
+## Free Printable Worksheets (Instant Download)
+- [The 7-Day Reading Joy Kit & Conversation Prompts](https://bestkidbooks.online/printables/7-day-reading-kit): Customizable 7-day family tracker with 7 thoughtful conversation prompts to ask after bedtime stories. (Age: All Ages, File: /downloads/printables/7-day-reading-kit.svg)
+- [CVC Sound-Box Mapping Mats](https://bestkidbooks.online/printables/cvc-sound-box-mats): Multi-sensory Elkonin sound boxes for tap-and-blend phonics practice with short a, e, i, o, u words. (Age: Ages 4–6, File: /downloads/printables/cvc-sound-box-mats.svg)
+- [Silent-e Magic Wand & Transformation Cards](https://bestkidbooks.online/printables/silent-e-magic-wands): Cut-out magic e wands that children slide over CVC words to reveal the long-vowel word. (Age: Ages 5–7, File: /downloads/printables/silent-e-magic-wands.svg)
+- [100-Book Wall Chart & Reading Tree](https://bestkidbooks.online/printables/100-book-reading-tree): Color a leaf or apple for every book read aloud. Celebrates volume and rereads without pressure. (Age: Ages 2–8, File: /downloads/printables/100-book-reading-tree.svg)
+- [Color-Your-Own Animal Reading Bookmarks](https://bestkidbooks.online/printables/animal-friend-bookmarks): Four printable bookmarks featuring Fox, Whale, Moon Cat, and Reading Bear. (Age: Ages 3–10, File: /downloads/printables/animal-friend-bookmarks.svg)
+- [Digraph Detective: sh, ch, th, wh Search](https://bestkidbooks.online/printables/digraph-detective-hunt): A fun picture-search printable where little detectives search for objects hiding digraph sounds. (Age: Ages 5–7, File: /downloads/printables/digraph-detective-hunt.svg)
+- [Official 30-Day Reading Champion Certificate](https://bestkidbooks.online/printables/reading-champion-certificate): A keepsake certificate honoring your child's curiosity, listening, and 30 days of reading moments. (Age: All Ages, File: /downloads/printables/reading-champion-certificate.svg)
+
+## Full In-Depth LLM Corpus
+For full dialogic scripts, phonics routines, and complete prompt sets, see:
+- https://bestkidbooks.online/llms-full.txt
