@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+  verification: {
+    google: "kW1WtRuJ_0gHA1zdc4DcVAsKT-zt8pLq4pPPM8_e8zE",
+  },
 };
 
 export default function RootLayout({
@@ -50,6 +53,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="kW1WtRuJ_0gHA1zdc4DcVAsKT-zt8pLq4pPPM8_e8zE"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
