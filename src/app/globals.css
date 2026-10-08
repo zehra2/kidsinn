@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand from the BEST KidSbooks Shop logo */
+  --color-cream: #fff6e8;
+  --color-paper: #fffdf9;
+  --color-ink: #2a2218;
+
+  --color-blue: #3b6fe8;
+  --color-blue-deep: #2a54c7;
+  --color-blue-soft: #5b8def;
+  --color-orange: #ff3b1f;
+  --color-orange-ink: #d92e16;
+  --color-sky: #a8c4ff;
+  --color-blush: #ff8fb1;
+  --color-honey: #ffc531;
+  --color-mint: #6ecf9b;
+  --color-bear: #e8b87a;
+
+  /* aliases used across components */
+  --color-tomato: var(--color-orange);
+  --color-tomato-ink: var(--color-orange-ink);
+  --color-sun: var(--color-honey);
+  --color-teal: var(--color-blue-soft);
+  --color-teal-ink: var(--color-blue-deep);
+  --color-indigo: var(--color-blue);
+  --color-leaf: var(--color-mint);
+  --color-berry: var(--color-blush);
+
+  --font-display: "Baloo 2", "Trebuchet MS", sans-serif;
+  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-story: "Newsreader", Georgia, serif;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-12px) rotate(calc(var(--r, 0deg) * -1));
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes page-flip {
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(-8deg);
+  }
+}
+
+/* Base layer so Tailwind utilities still win */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-honey);
+    color: var(--color-ink);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 0.98;
+  }
+
+  .story {
+    font-family: var(--font-story);
+    font-style: italic;
+  }
+
+  .mono-label {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 11px;
+    line-height: 1.35;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* screen-printed cardboard material */
+  .chunky {
+    border: 3px solid var(--color-ink);
+    box-shadow: 6px 6px 0 var(--color-ink);
+    background: var(--color-paper);
+  }
+
+  .chunky-sm {
+    border: 2.5px solid var(--color-ink);
+    box-shadow: 4px 4px 0 var(--color-ink);
+  }
+
+  .press {
+    transition:
+      transform 140ms cubic-bezier(0.2, 0.9, 0.3, 1.4),
+      box-shadow 140ms ease;
+  }
+  .press:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 var(--color-ink);
+  }
+  .press:active {
+    transform: translate(6px, 6px);
+    box-shadow: 0 0 0 var(--color-ink);
+  }
+  .press:focus-visible,
+  .btn:focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 3px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    border: 3px solid var(--color-ink);
+    box-shadow: 5px 5px 0 var(--color-ink);
+    padding: 0.8rem 1.4rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1;
+    border-radius: 999px;
+    transition:
+      transform 140ms cubic-bezier(0.2, 0.9, 0.3, 1.4),
+      box-shadow 140ms ease;
+  }
+  .btn:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 var(--color-ink);
+  }
+  .btn:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 var(--color-ink);
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: slide 34s linear infinite;
+  }
+  .marquee-track.rev {
+    animation-direction: reverse;
+  }
+
+  .bob {
+    animation: bob 5s ease-in-out infinite;
+  }
+  .bob.slow {
+    animation-duration: 7.5s;
+  }
+  .spin-slow {
+    animation: spin-slow 26s linear infinite;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 14px;
+    border: 2.5px solid var(--color-ink);
+    border-radius: 999px;
+    background: var(--color-paper);
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--color-ink);
+    border-radius: 999px;
+    background: var(--color-orange);
+    cursor: pointer;
+    box-shadow: 2px 2px 0 var(--color-ink);
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 26px;
+    height: 26px;
+    border: 3px solid var(--color-ink);
+    border-radius: 999px;
+    background: var(--color-orange);
+    cursor: pointer;
+  }
+  input[type="range"]:focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 4px;
+  }
+
+  .perf {
+    background-image: radial-gradient(
+      circle at 6px 50%,
+      var(--color-cream) 5px,
+      transparent 5.5px
+    );
+    background-size: 16px 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track,
+  .bob,
+  .spin-slow {
+    animation: none !important;
+  }
+}
