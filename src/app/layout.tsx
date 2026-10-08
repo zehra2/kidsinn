@@ -44,6 +44,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "kW1WtRuJ_0gHA1zdc4DcVAsKT-zt8pLq4pPPM8_e8zE",
+    other: {
+      "p:domain_verify": "b4f5f275f3e01eb43ca997d1a562651d",
+    },
   },
 };
 
@@ -56,6 +59,10 @@ export default function RootLayout({
         <meta
           name="google-site-verification"
           content="kW1WtRuJ_0gHA1zdc4DcVAsKT-zt8pLq4pPPM8_e8zE"
+        />
+        <meta
+          name="p:domain_verify"
+          content="b4f5f275f3e01eb43ca997d1a562651d"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
