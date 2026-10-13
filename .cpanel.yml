@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export PATH=/home/zehra1/nodevenv/Kidsbooksstore/20/bin:$PATH
+    - export NODE_ENV=production
+    - npm install
+    - npm run build
+    - /bin/mkdir -p tmp
+    - /bin/touch tmp/restart.txt
