@@ -234,11 +234,11 @@ export default function JournalsPage() {
                         className="btn flex-1 justify-center bg-orange text-cream text-[14.5px]"
                       >
                         <Download size={16} />
-                        Download PDF/SVG
+                        Download Free PDF
                       </a>
                     </div>
                     <p className="text-center text-[11.5px] text-ink/60">
-                      Standard letter size · Vector asset ready to print
+                      Standard letter size · High-resolution multi-page PDF ready to print
                     </p>
                   </div>
                 </div>

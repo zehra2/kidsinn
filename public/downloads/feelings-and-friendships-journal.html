@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feelings & Friendships Social-Emotional Journal - BestKidBooks.online</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f1ea;
+      font-family: 'Nunito', sans-serif;
+      color: #2c2523;
+    }
+
+    .no-print-bar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: #2c2523;
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .no-print-bar button {
+      background: #ff80ab;
+      color: #2c2523;
+      border: 2px solid #fff;
+      padding: 10px 22px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .page {
+      width: 8.5in;
+      height: 11in;
+      margin: 20px auto;
+      background: #fffdf9;
+      padding: 0.45in;
+      border: 3px solid #2c2523;
+      border-radius: 16px;
+      position: relative;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .no-print-bar { display: none !important; }
+      .page {
+        margin: 0;
+        border: 3px solid #2c2523;
+        border-radius: 0;
+        width: 100%;
+        height: 100vh;
+        page-break-after: always;
+      }
+    }
+
+    h1, h2, h3 {
+      font-family: 'Fredoka', sans-serif;
+      margin: 0;
+    }
+
+    .header-tag {
+      display: inline-block;
+      background: #ff9eb5;
+      color: #2c2523;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      border: 2px solid #2c2523;
+    }
+
+    .footer-brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 2px dashed #d6cfc2;
+      padding-top: 8px;
+      font-size: 11px;
+      color: #6e655f;
+      font-weight: 700;
+    }
+
+    .cover-box {
+      border: 4px solid #2c2523;
+      border-radius: 24px;
+      background: #fff5f8;
+      padding: 30px;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .name-plate {
+      background: #ffffff;
+      border: 3px solid #2c2523;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 10px auto;
+      width: 85%;
+      box-shadow: 4px 4px 0 #2c2523;
+    }
+
+    .write-line {
+      border-bottom: 2.5px dashed #2c2523;
+      height: 30px;
+      margin: 8px 0;
+    }
+
+    /* ANIMAL FEELINGS WHEEL GRID */
+    .wheel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 12px 0;
+      flex-grow: 1;
+    }
+
+    .animal-card {
+      border: 3px solid #2c2523;
+      border-radius: 18px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 3px 3px 0 #2c2523;
+    }
+
+    .animal-emoji {
+      font-size: 38px;
+      width: 62px;
+      height: 62px;
+      background: #fff;
+      border: 2.5px solid #2c2523;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* REFLECTION CARDS */
+    .prompt-box {
+      border: 3px solid #2c2523;
+      border-radius: 18px;
+      padding: 14px 18px;
+      background: #ffffff;
+      margin-bottom: 12px;
+      box-shadow: 4px 4px 0 #2c2523;
+    }
+
+    .draw-canvas {
+      border: 2.5px dashed #2c2523;
+      border-radius: 16px;
+      background: #fffdf7;
+      height: 155px;
+      padding: 10px 14px;
+      font-weight: 700;
+      font-size: 13px;
+      color: #5c534d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print-bar">
+    <div>
+      <strong>BestKidBooks.online — Feelings & Friendships Journal PDF Generator</strong> (6 Pages)
+    </div>
+    <button onclick="window.print()">🖨️ Click to Save as PDF (Ctrl+P)</button>
+  </div>
+
+  <!-- PAGE 1: COVER PAGE -->
+  <div class="page">
+    <div class="cover-box">
+      <div>
+        <span class="header-tag">Emotional Literacy • Ages 5–10</span>
+        <h1 style="font-size: 34px; margin-top: 14px; line-height: 1.15;">Feelings & Friendships<br>Social-Emotional Journal</h1>
+        <p style="font-size: 15px; font-weight: 700; color: #5c534d; margin-top: 8px;">
+          Help children name big feelings through story characters
+        </p>
+      </div>
+
+      <!-- Whale & Fox Illustration -->
+      <div style="margin: 8px auto; display: flex; justify-content: center; gap: 24px; align-items: center;">
+        <div style="background:#e1f5fe; border:3px solid #2c2523; border-radius:50%; width:110px; height:110px; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:3px 3px 0 #2c2523;">
+          <span style="font-size:44px;">🐋</span>
+          <span style="font-family:'Fredoka'; font-size:12px; font-weight:700;">Gentle Whale</span>
+        </div>
+        <div style="background:#fff3e0; border:3px solid #2c2523; border-radius:50%; width:110px; height:110px; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:3px 3px 0 #2c2523;">
+          <span style="font-size:44px;">🦊</span>
+          <span style="font-family:'Fredoka'; font-size:12px; font-weight:700;">Curious Fox</span>
+        </div>
+        <div style="background:#e8f5e9; border:3px solid #2c2523; border-radius:50%; width:110px; height:110px; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:3px 3px 0 #2c2523;">
+          <span style="font-size:44px;">🐻</span>
+          <span style="font-family:'Fredoka'; font-size:12px; font-weight:700;">Brave Bear</span>
+        </div>
+      </div>
+
+      <div class="name-plate">
+        <h3 style="font-size: 17px; color: #d81b60;">THIS PRIVATE REFLECTION JOURNAL BELONGS TO:</h3>
+        <div class="write-line"></div>
+        <div style="display: flex; justify-content: space-between; margin-top: 12px; font-weight: 700; font-size: 13px;">
+          <span>My Age: _______</span>
+          <span>My Reading Buddy / Parent: ______________________</span>
+        </div>
+      </div>
+
+      <div style="text-align: left; background: #fff; border: 2.5px solid #2c2523; border-radius: 14px; padding: 14px 18px; font-size: 13px;">
+        <strong>💛 A Note for Parents & Caregivers:</strong>
+        <p style="margin: 6px 0 0 0; line-height: 1.5;">
+          Developed with child psychologists, this journal uses book characters as gentle mirrors for <strong>worry, anger, jealousy, and bravery</strong>. There are no "wrong" feelings here—every story is a safe space to explore big emotions together!
+        </p>
+      </div>
+    </div>
+    <div class="footer-brand">
+      <span>BestKidBooks.online • Evidence-Based Pediatric Literacy</span>
+      <span>Page 1 of 6</span>
+    </div>
+  </div>
+
+  <!-- PAGE 2: ANIMAL FEELINGS WHEEL -->
+  <div class="page">
+    <div>
+      <span class="header-tag" style="background:#80deea;">Visual Emotion Finder</span>
+      <h2 style="font-size: 26px; margin-top: 6px;">The Kid-Friendly Animal Feelings Wheel</h2>
+      <p style="font-size: 13px; font-weight: 600; margin: 4px 0 8px 0;">
+        Point to the animal that matches how the story character felt tonight—and how YOU felt today!
+      </p>
+    </div>
+
+    <div class="wheel-grid">
+      <div class="animal-card" style="background:#e1f5fe;">
+        <div class="animal-emoji">🐋</div>
+        <div>
+          <h3 style="font-size:17px;">Worried Whale</h3>
+          <p style="font-size:12px; margin:3px 0 0 0;"><strong>Feels like:</strong> Nervous, fluttery tummy, or a small worry growing into a big tide.</p>
+        </div>
+      </div>
+
+      <div class="animal-card" style="background:#fff3e0;">
+        <div class="animal-emoji">🦊</div>
+        <div>
+          <h3 style="font-size:17px;">Impatient Fox</h3>
+          <p style="font-size:12px; margin:3px 0 0 0;"><strong>Feels like:</strong> Wiggling paws, frustrated, tired of waiting, or wanting a turn right now!</p>
+        </div>
+      </div>
+
+      <div class="animal-card" style="background:#ffebee;">
+        <div class="animal-emoji">🐉</div>
+        <div>
+          <h3 style="font-size:17px;">Fiery Dragon (Anger)</h3>
+          <p style="font-size:12px; margin:3px 0 0 0;"><strong>Feels like:</strong> Hot cheeks, tight fists, stomping feet, or feeling something was unfair.</p>
+        </div>
+      </div>
+
+      <div class="animal-card" style="background:#e8f5e9;">
+        <div class="animal-emoji">🦎</div>
+        <div>
+          <h3 style="font-size:17px;">Jealous Gecko</h3>
+          <p style="font-size:12px; margin:3px 0 0 0;"><strong>Feels like:</strong> Wishing you had someone else's toy, prize, or special attention.</p>
+        </div>
+      </div>
+
+      <div class="animal-card" style="background:#f3e5f5;">
+        <div class="animal-emoji">🐢</div>
+        <div>
+          <h3 style="font-size:17px;">Shy / Sad Turtle</h3>
+          <p style="font-size:12px; margin:3px 0 0 0;"><strong>Feels like:</strong> Wanting to hide inside your shell, feeling left out, lonely, or tearful.</p>
+        </div>
+      </div>
+
+      <div class="animal-card" style="background:#fff8e1;">
+        <div class="animal-emoji">🦁</div>
+        <div>
+          <h3 style="font-size:17px;">Brave Lion</h3>
+          <p style="font-size:12px; margin:3px 0 0 0;"><strong>Feels like:</strong> Trying something new or speaking up even when your heart beats fast!</p>
+        </div>
+      </div>
+
+      <div class="animal-card" style="background:#e0f2f1;">
+        <div class="animal-emoji">🦦</div>
+        <div>
+          <h3 style="font-size:17px;">Calm Sea Otter</h3>
+          <p style="font-size:12px; margin:3px 0 0 0;"><strong>Feels like:</strong> Floating peacefully, slow breathing, safe, cozy, and relaxed.</p>
+        </div>
+      </div>
+
+      <div class="animal-card" style="background:#fce4ec;">
+        <div class="animal-emoji">🐶</div>
+        <div>
+          <h3 style="font-size:17px;">Joyful Puppy</h3>
+          <p style="font-size:12px; margin:3px 0 0 0;"><strong>Feels like:</strong> Giggly, proud, excited, playful, and full of happy energy!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-brand">
+      <span>BestKidBooks.online • Feelings & Friendships Social-Emotional Journal</span>
+      <span>Page 2 of 6</span>
+    </div>
+  </div>
+
+  <!-- PAGE 3: AFTER-STORY EMOTIONAL MIRROR LOG -->
+  <div class="page">
+    <div>
+      <span class="header-tag" style="background:#ffd54f;">After-Story Reflection Sheet (Reprintable)</span>
+      <h2 style="font-size: 24px; margin-top: 6px;">Story Character Mirror & Empathy Prompts</h2>
+      <div style="display:flex; justify-content:space-between; font-weight:700; font-size:13px; margin: 8px 0; background:#fff; border:2px solid #2c2523; padding:8px 12px; border-radius:12px;">
+        <span>📖 Book Title: ___________________________________________</span>
+        <span>Date: _______________</span>
+      </div>
+    </div>
+
+    <div class="prompt-box" style="background:#fff9f0;">
+      <h3 style="font-size:16px; color:#e65100;">🦊 1. “When Fox got impatient, what helped him wait?”</h3>
+      <p style="font-size:12px; margin:2px 0 6px 0;">Which character felt frustrated, angry, or impatient tonight? What helped them solve the problem?</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="prompt-box" style="background:#f0f9ff;">
+      <h3 style="font-size:16px; color:#0277bd;">🐋 2. “Have you ever felt a small worry grow big like Whale's tide?”</h3>
+      <p style="font-size:12px; margin:2px 0 6px 0;"><strong>Empathy Prompt:</strong> How would you help Whale (or tonight's character) feel safe and calm?</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="prompt-box" style="background:#fdf2f8;">
+      <h3 style="font-size:16px; color:#ad1457;">💬 3. “What kind words can we give someone who made a mistake?”</h3>
+      <p style="font-size:12px; margin:2px 0 6px 0;">Write a kind sentence for a character—or for yourself when you make a mistake:</p>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="draw-canvas">
+      🦁 4. “Draw what bravery looked like in tonight's chapter:”
+    </div>
+
+    <div class="footer-brand">
+      <span>BestKidBooks.online • Feelings & Friendships Social-Emotional Journal</span>
+      <span>Page 3 of 6</span>
+    </div>
+  </div>
+
+  <!-- PAGE 4: EMPATHY & HELPING WHALE CALM DOWN TOOLKIT -->
+  <div class="page">
+    <div>
+      <span class="header-tag" style="background:#81c784;">Self-Regulation Activity</span>
+      <h2 style="font-size: 25px; margin-top: 6px;">How Would You Help Whale Feel Calm?</h2>
+      <p style="font-size: 13px; font-weight: 600; margin: 4px 0 10px 0;">
+        When a character in a book—or YOU—feels a big wave of worry or anger, circle the calming tools below that help shrink the wave!
+      </p>
+    </div>
+
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+      <div class="prompt-box" style="text-align:center; margin:0;">
+        <div style="font-size:32px;">🌬️</div>
+        <h3 style="font-size:15px;">3 Whale Breaths</h3>
+        <p style="font-size:11px; margin:4px 0 0 0;">Breathe in slow through your nose, blow out through your spout!</p>
+      </div>
+      <div class="prompt-box" style="text-align:center; margin:0;">
+        <div style="font-size:32px;">🧸</div>
+        <h3 style="font-size:15px;">20-Second Hug</h3>
+        <p style="font-size:11px; margin:4px 0 0 0;">Squeeze a parent, pillow, or favorite stuffed animal tight.</p>
+      </div>
+      <div class="prompt-box" style="text-align:center; margin:0;">
+        <div style="font-size:32px;">🥤</div>
+        <h3 style="font-size:15px;">Cool Sip of Water</h3>
+        <p style="font-size:11px; margin:4px 0 0 0;">Take slow sips of cold water to cool down Dragon anger.</p>
+      </div>
+      <div class="prompt-box" style="text-align:center; margin:0;">
+        <div style="font-size:32px;">🖍️</div>
+        <h3 style="font-size:15px;">Draw the Feeling</h3>
+        <p style="font-size:11px; margin:4px 0 0 0;">Put the worry on paper so it doesn't stay stuck in your head.</p>
+      </div>
+      <div class="prompt-box" style="text-align:center; margin:0;">
+        <div style="font-size:32px;">🐢</div>
+        <h3 style="font-size:15px;">Turtle Cozy Corner</h3>
+        <p style="font-size:11px; margin:4px 0 0 0;">Curl up with a favorite picture book in a quiet spot.</p>
+      </div>
+      <div class="prompt-box" style="text-align:center; margin:0;">
+        <div style="font-size:32px;">🗣️</div>
+        <h3 style="font-size:15px;">Name the Animal</h3>
+        <p style="font-size:11px; margin:4px 0 0 0;">Say out loud: "I feel like Impatient Fox right now!"</p>
+      </div>
+    </div>
+
+    <div class="prompt-box" style="margin-top:14px; flex-grow:1; display:flex; flex-direction:column; justify-content:space-between;">
+      <div>
+        <h3 style="font-size:18px; color:#0277bd;">🌊 Draw Your Own "Calm Ocean" Safe Space</h3>
+        <p style="font-size:12px; margin:4px 0;">Draw the people, pets, books, and cozy things that help you feel safe when worries get big:</p>
+      </div>
+      <div style="border:2.5px dashed #2c2523; border-radius:14px; height:220px; background:#f0f9ff;"></div>
+    </div>
+
+    <div class="footer-brand">
+      <span>BestKidBooks.online • Feelings & Friendships Social-Emotional Journal</span>
+      <span>Page 4 of 6</span>
+    </div>
+  </div>
+
+  <!-- PAGE 5: SAFE PRIVATE REFLECTION SPACE BETWEEN PARENT & CHILD -->
+  <div class="page">
+    <div>
+      <span class="header-tag" style="background:#ce93d8;">Private Parent & Child Connection</span>
+      <h2 style="font-size: 25px; margin-top: 6px;">Our Safe Back-and-Forth Reflection Page</h2>
+      <p style="font-size: 13px; font-weight: 600; margin: 4px 0 10px 0;">
+        A judgment-free space to share feelings that are sometimes hard to say out loud.
+      </p>
+    </div>
+
+    <div class="prompt-box" style="background:#fffde7;">
+      <h3 style="font-size:17px;">🌟 Child's Private Corner:</h3>
+      <p style="font-size:13px; font-weight:700; margin-top:6px;">Today, a feeling I had that was hard to talk about was:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <p style="font-size:13px; font-weight:700; margin-top:10px;">What I wish my grown-up knew about how I felt:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="prompt-box" style="background:#f3e5f5;">
+      <h3 style="font-size:17px;">💜 Grown-Up's Loving Reply:</h3>
+      <p style="font-size:13px; font-weight:700; margin-top:6px;">Thank you for telling me! Here is a time when I felt that exact same way:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <p style="font-size:13px; font-weight:700; margin-top:10px;">One brave or kind thing I noticed you do this week was:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="prompt-box" style="background:#e8f5e9; text-align:center;">
+      <h3 style="font-size:16px;">🤝 Our Bedtime Connection Check-In</h3>
+      <p style="font-size:13px; margin:6px 0;">Circle how we want to end storytime tonight:</p>
+      <div style="display:flex; justify-content:space-around; font-weight:800; font-size:14px; margin-top:8px;">
+        <span>🐻 Giant Bear Hug</span>
+        <span>🐋 3 Deep Whale Breaths</span>
+        <span>🦊 Silly Fox High-Five</span>
+        <span>✨ Back Scratch</span>
+      </div>
+    </div>
+
+    <div class="footer-brand">
+      <span>BestKidBooks.online • Feelings & Friendships Social-Emotional Journal</span>
+      <span>Page 5 of 6</span>
+    </div>
+  </div>
+
+  <!-- PAGE 6: EMOTIONAL LITERACY CERTIFICATE -->
+  <div class="page">
+    <div class="cover-box" style="background: #fff5f8; border: 6px double #2c2523;">
+      <div>
+        <span class="header-tag" style="background: #ff9eb5;">Heart & Empathy Award</span>
+        <h1 style="font-size: 34px; margin-top: 16px;">Kind Heart & Brave Explorer<br>Certificate</h1>
+        <p style="font-size: 16px; font-weight: 700; margin-top: 8px;">This special award is proudly presented to:</p>
+      </div>
+
+      <div style="width: 85%; margin: 10px auto;">
+        <div style="border-bottom: 4px solid #2c2523; height: 45px;"></div>
+        <p style="font-size: 15px; font-weight: 700; margin-top: 14px; line-height: 1.5;">
+          For learning to name big feelings, showing kindness when friends make mistakes, and exploring stories with empathy and bravery!
+        </p>
+      </div>
+
+      <div style="font-size: 60px; margin: 10px 0;">🐋💛🦊🦁</div>
+
+      <div style="display: flex; justify-content: space-around; width: 90%; margin: 20px auto 0 auto; font-weight: 700; font-size: 14px;">
+        <div style="width: 42%;">
+          <div style="border-bottom: 2px solid #2c2523; height: 30px;"></div>
+          <span style="display:block; margin-top: 6px;">Parent / Counselor Signature</span>
+        </div>
+        <div style="width: 42%;">
+          <div style="border-bottom: 2px solid #2c2523; height: 30px;"></div>
+          <span style="display:block; margin-top: 6px;">Date Awarded</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-brand">
+      <span>BestKidBooks.online • Evidence-Based Pediatric Literacy</span>
+      <span>Page 6 of 6</span>
+    </div>
+  </div>
+
+</body>
+</html>

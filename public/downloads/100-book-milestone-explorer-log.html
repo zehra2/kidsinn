@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The 100-Book Milestone Explorer Log - BestKidBooks.online</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f1ea;
+      font-family: 'Nunito', sans-serif;
+      color: #2c2523;
+    }
+
+    .no-print-bar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: #2c2523;
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .no-print-bar button {
+      background: #f4b400;
+      color: #2c2523;
+      border: 2px solid #fff;
+      padding: 10px 22px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .page {
+      width: 8.5in;
+      height: 11in;
+      margin: 20px auto;
+      background: #fffdf9;
+      padding: 0.45in;
+      border: 3px solid #2c2523;
+      border-radius: 16px;
+      position: relative;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .no-print-bar { display: none !important; }
+      .page {
+        margin: 0;
+        border: 3px solid #2c2523;
+        border-radius: 0;
+        width: 100%;
+        height: 100vh;
+        page-break-after: always;
+      }
+    }
+
+    h1, h2, h3 {
+      font-family: 'Fredoka', sans-serif;
+      margin: 0;
+    }
+
+    .header-tag {
+      display: inline-block;
+      background: #ff6b4a;
+      color: #fff;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 2px solid #2c2523;
+    }
+
+    .footer-brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 2px dashed #d6cfc2;
+      padding-top: 8px;
+      font-size: 11px;
+      color: #6e655f;
+      font-weight: 700;
+    }
+
+    /* COVER PAGE */
+    .cover-box {
+      border: 4px solid #2c2523;
+      border-radius: 24px;
+      background: #fff9ec;
+      padding: 32px;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .name-plate {
+      background: #ffffff;
+      border: 3px solid #2c2523;
+      border-radius: 18px;
+      padding: 20px;
+      margin: 15px auto;
+      width: 85%;
+      box-shadow: 4px 4px 0 #2c2523;
+    }
+
+    .write-line {
+      border-bottom: 3px dashed #2c2523;
+      height: 36px;
+      margin: 10px 0;
+    }
+
+    /* STAMP GRID */
+    .stamp-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 7px;
+      margin: 10px 0;
+      flex-grow: 1;
+    }
+
+    .stamp {
+      border: 2px dashed #2c2523;
+      border-radius: 10px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      position: relative;
+    }
+
+    .stamp.milestone {
+      background: #fff2cc;
+      border: 2.5px solid #e69138;
+      box-shadow: 2px 2px 0 #2c2523;
+    }
+
+    .stamp span.icon {
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    /* BADGES PAGE */
+    .badge-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 12px 0;
+    }
+
+    .badge-card {
+      border: 3px solid #2c2523;
+      border-radius: 18px;
+      padding: 14px;
+      background: #fff;
+      text-align: center;
+      box-shadow: 4px 4px 0 #2c2523;
+    }
+
+    .badge-card.gold {
+      grid-column: span 2;
+      background: #fff8dc;
+    }
+
+    .badge-circle {
+      width: 68px;
+      height: 68px;
+      border: 3px dashed #2c2523;
+      border-radius: 50%;
+      margin: 6px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      background: #fefefe;
+    }
+
+    /* LOG TABLE */
+    table.book-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0;
+      font-size: 12px;
+    }
+
+    table.book-table th {
+      background: #ffecb3;
+      border: 2px solid #2c2523;
+      padding: 6px 8px;
+      font-family: 'Fredoka', sans-serif;
+      text-align: left;
+    }
+
+    table.book-table td {
+      border: 1.5px solid #2c2523;
+      padding: 4.5px 8px;
+      height: 22px;
+    }
+
+    /* ACTIVITY REVIEW CARDS */
+    .review-card {
+      border: 3px solid #2c2523;
+      border-radius: 18px;
+      padding: 16px;
+      background: #fff;
+      margin-bottom: 14px;
+      box-shadow: 4px 4px 0 #2c2523;
+    }
+
+    .quote-bubble {
+      border: 2.5px solid #2c2523;
+      border-radius: 18px;
+      padding: 12px 16px;
+      background: #f0f9ff;
+      position: relative;
+      margin-top: 8px;
+    }
+
+    .draw-box {
+      border: 2.5px dashed #2c2523;
+      border-radius: 14px;
+      height: 115px;
+      background: #fffdf7;
+      display: flex;
+      align-items: flex-start;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #7a7067;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print-bar">
+    <div>
+      <strong>BestKidBooks.online — Printable PDF Generator</strong> (8 Pages • Ready for Upload)
+    </div>
+    <button onclick="window.print()">🖨️ Click to Save as PDF (Ctrl+P)</button>
+  </div>
+
+  <!-- PAGE 1: COVER PAGE -->
+  <div class="page">
+    <div class="cover-box">
+      <div>
+        <span class="header-tag">Milestone Tracker • Ages 4–9</span>
+        <h1 style="font-size: 38px; margin-top: 14px; line-height: 1.15;">The 100-Book Milestone<br>Explorer Log</h1>
+        <p style="font-size: 16px; font-weight: 700; color: #5c534d; margin-top: 8px;">
+          Track, rate, and celebrate your first 100 books!
+        </p>
+      </div>
+
+      <!-- Cute Bear Reading SVG Illustration -->
+      <div style="margin: 10px auto;">
+        <svg width="160" height="140" viewBox="0 0 200 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="42" r="22" fill="#D99B66" stroke="#2C2523" stroke-width="5"/>
+          <circle cx="60" cy="42" r="11" fill="#F4C7A1"/>
+          <circle cx="140" cy="42" r="22" fill="#D99B66" stroke="#2C2523" stroke-width="5"/>
+          <circle cx="140" cy="42" r="11" fill="#F4C7A1"/>
+          <circle cx="100" cy="82" r="52" fill="#D99B66" stroke="#2C2523" stroke-width="5"/>
+          <ellipse cx="100" cy="94" rx="22" ry="17" fill="#FFF5EB" stroke="#2C2523" stroke-width="4"/>
+          <circle cx="80" cy="72" r="6" fill="#2C2523"/>
+          <circle cx="120" cy="72" r="6" fill="#2C2523"/>
+          <ellipse cx="100" cy="88" rx="8" ry="5" fill="#2C2523"/>
+          <path d="M92 98 Q100 106 108 98" stroke="#2C2523" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <!-- Open Book -->
+          <path d="M40 125 L100 140 L160 125 L160 162 L100 168 L40 162 Z" fill="#FF6B4A" stroke="#2C2523" stroke-width="5"/>
+          <path d="M45 120 L100 135 L155 120 L155 156 L100 164 L45 156 Z" fill="#FFFDF9" stroke="#2C2523" stroke-width="4"/>
+          <line x1="100" y1="135" x2="100" y2="164" stroke="#2C2523" stroke-width="4"/>
+        </svg>
+      </div>
+
+      <div class="name-plate">
+        <h3 style="font-size: 18px; color: #ff6b4a;">THIS EXPLORER PASSPORT BELONGS TO:</h3>
+        <div class="write-line"></div>
+        <div style="display: flex; justify-content: space-between; margin-top: 14px; font-weight: 700; font-size: 14px;">
+          <span>Explorer Age: _______</span>
+          <span>Start Date: ______________</span>
+        </div>
+      </div>
+
+      <div style="text-align: left; background: #fff; border: 2.5px solid #2c2523; border-radius: 14px; padding: 14px 18px; font-size: 13px;">
+        <strong>🌟 Explorer Rules for Parents & Kids:</strong>
+        <ul style="margin: 6px 0 0 0; padding-left: 20px; line-height: 1.5;">
+          <li><strong>Every Story Counts:</strong> Picture books, graphic novels, bedtime read-alouds, and audiobooks all earn a stamp!</li>
+          <li><strong>Rereads Count Too:</strong> Reading your favorite story 5 times equals 5 stamps!</li>
+          <li><strong>Celebrate Milestones:</strong> Color your special badge at <strong>10, 25, 50, 75, and 100 books</strong>.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-brand">
+      <span>BestKidBooks.online • Evidence-Based Pediatric Literacy</span>
+      <span>Page 1 of 7</span>
+    </div>
+  </div>
+
+  <!-- PAGE 2: 100 STORY PASSPORT STAMPS -->
+  <div class="page">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span class="header-tag" style="background:#4db6ac;">Visual Progress Map</span>
+          <h2 style="font-size: 26px; margin-top: 4px;">100 Story Passport Stamps to Color In</h2>
+        </div>
+        <div style="font-size: 12px; font-weight: 700; background: #fff2cc; border: 2px solid #2c2523; padding: 6px 12px; border-radius: 12px;">
+          ⭐ Color 1 stamp for every book finished!
+        </div>
+      </div>
+    </div>
+
+    <div class="stamp-grid">
+      <script>
+        const milestones = [10, 25, 50, 75, 100];
+        for (let i = 1; i <= 100; i++) {
+          const isM = milestones.includes(i);
+          const icon = isM ? '🏆' : '🐾';
+          document.write(`
+            <div class="stamp ${isM ? 'milestone' : ''}">
+              <span class="icon">${icon}</span>
+              <span>#${i}</span>
+            </div>
+          `);
+        }
+      </script>
+    </div>
+
+    <div class="footer-brand">
+      <span>BestKidBooks.online • The 100-Book Milestone Explorer Log</span>
+      <span>Page 2 of 7</span>
+    </div>
+  </div>
+
+  <!-- PAGE 3: MILESTONE BADGES -->
+  <div class="page">
+    <div>
+      <span class="header-tag" style="background:#f4b400; color:#2c2523;">Celebration Checkpoints</span>
+      <h2 style="font-size: 28px; margin-top: 6px;">My Reading Milestone Badges</h2>
+      <p style="font-size: 13px; margin: 4px 0 8px 0; font-weight: 600;">
+        Color in each badge when you reach the milestone and write down the special book that got you there!
+      </p>
+
+      <div class="badge-grid">
+        <div class="badge-card">
+          <div class="badge-circle">🌱</div>
+          <h3 style="font-size: 18px;">10-Book Sprout Scout</h3>
+          <p style="font-size: 12px; margin: 4px 0;">Date Reached: _______________</p>
+          <p style="font-size: 12px; margin: 4px 0;">Book #10 Title: _____________________</p>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-circle">🧭</div>
+          <h3 style="font-size: 18px;">25-Book Story Pathfinder</h3>
+          <p style="font-size: 12px; margin: 4px 0;">Date Reached: _______________</p>
+          <p style="font-size: 12px; margin: 4px 0;">Book #25 Title: _____________________</p>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-circle">🚀</div>
+          <h3 style="font-size: 18px;">50-Book Halfway Hero</h3>
+          <p style="font-size: 12px; margin: 4px 0;">Date Reached: _______________</p>
+          <p style="font-size: 12px; margin: 4px 0;">Book #50 Title: _____________________</p>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-circle">🦁</div>
+          <h3 style="font-size: 18px;">75-Book Chapter Champion</h3>
+          <p style="font-size: 12px; margin: 4px 0;">Date Reached: _______________</p>
+          <p style="font-size: 12px; margin: 4px 0;">Book #75 Title: _____________________</p>
+        </div>
+
+        <div class="badge-card gold">
+          <div class="badge-circle" style="width:80px; height:80px; font-size:38px;">👑</div>
+          <h3 style="font-size: 22px; color:#d9534f;">100-BOOK GRAND MASTER EXPLORER!</h3>
+          <p style="font-size: 13px; margin: 6px 0;">Date Completed: ___________________ • Our Family Celebration Reward: ___________________________</p>
+          <p style="font-size: 13px; margin: 6px 0;">My #1 Favorite Book Out of All 100 Was: ________________________________________________________</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-brand">
+      <span>BestKidBooks.online • The 100-Book Milestone Explorer Log</span>
+      <span>Page 3 of 7</span>
+    </div>
+  </div>
+
+  <!-- PAGE 4: BOOKS 1 TO 50 MASTER LOG -->
+  <div class="page">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h2 style="font-size: 22px;">Master Reading Log: Books #1 to #50</h2>
+        <span style="font-size: 12px; font-weight: 700;">Color 1 to 5 Smiling Bears 🐻 for every story!</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 6px;">
+        <table class="book-table">
+          <thead><tr><th style="width:14%">#</th><th>Book Title</th><th style="width:32%">Bear Rating</th></tr></thead>
+          <tbody>
+            <script>
+              for(let i=1; i<=25; i++) {
+                document.write(`<tr><td><strong>${i}</strong></td><td></td><td style="font-size:11px;">🐻🐻🐻🐻🐻</td></tr>`);
+              }
+            </script>
+          </tbody>
+        </table>
+        <table class="book-table">
+          <thead><tr><th style="width:14%">#</th><th>Book Title</th><th style="width:32%">Bear Rating</th></tr></thead>
+          <tbody>
+            <script>
+              for(let i=26; i<=50; i++) {
+                document.write(`<tr><td><strong>${i}</strong></td><td></td><td style="font-size:11px;">🐻🐻🐻🐻🐻</td></tr>`);
+              }
+            </script>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer-brand">
+      <span>BestKidBooks.online • The 100-Book Milestone Explorer Log</span>
+      <span>Page 4 of 7</span>
+    </div>
+  </div>
+
+  <!-- PAGE 5: BOOKS 51 TO 100 MASTER LOG -->
+  <div class="page">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h2 style="font-size: 22px;">Master Reading Log: Books #51 to #100</h2>
+        <span style="font-size: 12px; font-weight: 700;">Color 1 to 5 Smiling Bears 🐻 for every story!</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 6px;">
+        <table class="book-table">
+          <thead><tr><th style="width:14%">#</th><th>Book Title</th><th style="width:32%">Bear Rating</th></tr></thead>
+          <tbody>
+            <script>
+              for(let i=51; i<=75; i++) {
+                document.write(`<tr><td><strong>${i}</strong></td><td></td><td style="font-size:11px;">🐻🐻🐻🐻🐻</td></tr>`);
+              }
+            </script>
+          </tbody>
+        </table>
+        <table class="book-table">
+          <thead><tr><th style="width:14%">#</th><th>Book Title</th><th style="width:32%">Bear Rating</th></tr></thead>
+          <tbody>
+            <script>
+              for(let i=76; i<=100; i++) {
+                document.write(`<tr><td><strong>${i}</strong></td><td></td><td style="font-size:11px;">🐻🐻🐻🐻🐻</td></tr>`);
+              }
+            </script>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer-brand">
+      <span>BestKidBooks.online • The 100-Book Milestone Explorer Log</span>
+      <span>Page 5 of 7</span>
+    </div>
+  </div>
+
+  <!-- PAGE 6: AFTER-STORY REFLECTION & QUOTE BUBBLES (Reprintable Sheet) -->
+  <div class="page">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 10px;">
+        <div>
+          <span class="header-tag" style="background:#7e57c2;">After-Story Explorer Sheet (Print as many as you like!)</span>
+          <h2 style="font-size: 24px; margin-top: 4px;">Little Critic Spotlight & Funniest Quotes</h2>
+        </div>
+      </div>
+
+      <!-- Review Card 1 -->
+      <div class="review-card">
+        <div style="display:flex; justify-content:space-between; font-weight:800; font-size:14px; border-bottom:2px dashed #ccc; padding-bottom:6px;">
+          <span>Book #: ______ • Title: _____________________________________________</span>
+          <span>Rate: 🐻 🐻 🐻 🐻 🐻</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 14px; margin-top: 10px;">
+          <div>
+            <div class="quote-bubble">
+              <strong style="font-size:12px; color:#0277bd;">💬 Quote Bubble: The funniest line from this book!</strong>
+              <div style="height: 45px; border-bottom: 1.5px dotted #999; margin-top:4px;"></div>
+            </div>
+            <div style="margin-top: 10px; font-size: 13px; font-weight: 700;">
+              ✨ Which word was the coolest new word we learned?<br>
+              <div style="border-bottom: 2px dashed #2c2523; height: 24px; margin-top: 2px;"></div>
+            </div>
+            <div style="margin-top: 10px; font-size: 13px; font-weight: 700;">
+              🤝 Would you recommend this book to your best friend? (Circle: YES / NO)<br>
+              Why? _______________________________________________________
+            </div>
+          </div>
+          <div class="draw-box" style="height: 175px;">
+            🎨 Draw the funniest face or character from this book:
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Card 2 -->
+      <div class="review-card">
+        <div style="display:flex; justify-content:space-between; font-weight:800; font-size:14px; border-bottom:2px dashed #ccc; padding-bottom:6px;">
+          <span>Book #: ______ • Title: _____________________________________________</span>
+          <span>Rate: 🐻 🐻 🐻 🐻 🐻</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 14px; margin-top: 10px;">
+          <div>
+            <div class="quote-bubble">
+              <strong style="font-size:12px; color:#0277bd;">💬 Quote Bubble: The funniest line from this book!</strong>
+              <div style="height: 45px; border-bottom: 1.5px dotted #999; margin-top:4px;"></div>
+            </div>
+            <div style="margin-top: 10px; font-size: 13px; font-weight: 700;">
+              ✨ Which word was the coolest new word we learned?<br>
+              <div style="border-bottom: 2px dashed #2c2523; height: 24px; margin-top: 2px;"></div>
+            </div>
+            <div style="margin-top: 10px; font-size: 13px; font-weight: 700;">
+              🤝 Would you recommend this book to your best friend? (Circle: YES / NO)<br>
+              Why? _______________________________________________________
+            </div>
+          </div>
+          <div class="draw-box" style="height: 175px;">
+            🎨 Draw the funniest face or character from this book:
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-brand">
+      <span>BestKidBooks.online • Reprint this page for your favorite stories!</span>
+      <span>Page 6 of 7</span>
+    </div>
+  </div>
+
+  <!-- PAGE 7: OFFICIAL CERTIFICATE -->
+  <div class="page">
+    <div class="cover-box" style="background: #fffdf0; border: 6px double #2c2523;">
+      <div>
+        <span class="header-tag" style="background: #f4b400; color: #2c2523;">Official Literacy Award</span>
+        <h1 style="font-size: 36px; margin-top: 16px;">100-Book Explorer Certificate</h1>
+        <p style="font-size: 16px; font-weight: 700; margin-top: 8px;">This proud badge of honor is officially awarded to:</p>
+      </div>
+
+      <div style="width: 85%; margin: 10px auto;">
+        <div style="border-bottom: 4px solid #2c2523; height: 45px;"></div>
+        <p style="font-size: 15px; font-weight: 700; margin-top: 12px; line-height: 1.5;">
+          For reading, rating, and exploring <strong>100 wonderful books</strong> with curiosity, imagination, and joy!
+        </p>
+      </div>
+
+      <div style="font-size: 64px; margin: 10px 0;">🏆🐻📚</div>
+
+      <div style="display: flex; justify-content: space-around; width: 90%; margin: 20px auto 0 auto; font-weight: 700; font-size: 14px;">
+        <div style="width: 42%;">
+          <div style="border-bottom: 2px solid #2c2523; height: 30px;"></div>
+          <span style="display:block; margin-top: 6px;">Parent / Teacher Signature</span>
+        </div>
+        <div style="width: 42%;">
+          <div style="border-bottom: 2px solid #2c2523; height: 30px;"></div>
+          <span style="display:block; margin-top: 6px;">Date of 100th Book</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-brand">
+      <span>BestKidBooks.online • Evidence-Based Pediatric Literacy</span>
+      <span>Page 7 of 7</span>
+    </div>
+  </div>
+
+</body>
+</html>

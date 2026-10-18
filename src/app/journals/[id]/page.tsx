@@ -2,7 +2,7 @@
 
 import { use } from "react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { Nav, Footer, SectionHead, Sticker, Wave } from "@/components/ui";
 import { JOURNALS, type JournalItem } from "@/lib/consolidated-data";
 import {
@@ -26,6 +26,15 @@ export default function JournalDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const resolvedParams = use(params);
+  if (resolvedParams.id === "100-book-explorer-log") {
+    redirect("/journals/100-book-milestone-explorer-log");
+  }
+  if (resolvedParams.id === "bedtime-connection-journal") {
+    redirect("/journals/bedtime-connection-journal");
+  }
+  if (resolvedParams.id === "feelings-and-friendships-social-emotional-journal") {
+    redirect("/journals/feelings-character-journal");
+  }
   const journal = JOURNALS.find((j) => j.id === resolvedParams.id);
 
   if (!journal) {

@@ -545,8 +545,8 @@ export const JOURNALS: JournalItem[] = [
     age: "Ages 3–7",
     color: "bg-[#5b8def]",
     tag: "Parent Favorite",
-    downloadUrl: "/downloads/journals/bedtime-connection-journal.svg",
-    printableSvgPath: "/downloads/journals/bedtime-connection-journal.svg",
+    downloadUrl: "/downloads/bedtime-connection-journal.pdf",
+    printableSvgPath: "/downloads/bedtime-connection-journal.pdf",
     description: "Rather than asking 'What was the story about?', this journal asks questions that connect the book's heart to your child's real day.",
     highlights: [
       "Guided after-reading prompts that spark real conversations",
@@ -569,14 +569,14 @@ export const JOURNALS: JournalItem[] = [
     journalSections: ["Tonight's Story Title & Author", "Curiosity Spark Question", "Child's Doodle Box", "5-Bear Giggle Rating", "Parent's 1-Line Memory Note"]
   },
   {
-    id: "100-book-explorer-log",
+    id: "100-book-milestone-explorer-log",
     title: "The 100-Book Milestone Explorer Log",
     subtitle: "Track, rate, and celebrate your child's first 100 books",
     age: "Ages 4–9",
     color: "bg-[#ffc531]",
     tag: "Milestone Tracker",
-    downloadUrl: "/downloads/journals/100-book-explorer-log.svg",
-    printableSvgPath: "/downloads/journals/100-book-explorer-log.svg",
+    downloadUrl: "/downloads/100-book-milestone-explorer-log.pdf",
+    printableSvgPath: "/downloads/100-book-milestone-explorer-log.pdf",
     description: "A vibrant, illustrated book tracker that turns every completed story into a proud badge of honor. Built for rereads, graphic novels, and bedtime favorites.",
     highlights: [
       "100 numbered story passport stamps to color in",
@@ -605,8 +605,8 @@ export const JOURNALS: JournalItem[] = [
     age: "Ages 5–10",
     color: "bg-[#ff8fb1]",
     tag: "Emotional Literacy",
-    downloadUrl: "/downloads/journals/feelings-character-journal.svg",
-    printableSvgPath: "/downloads/journals/feelings-character-journal.svg",
+    downloadUrl: "/downloads/feelings-friendships-journal.pdf",
+    printableSvgPath: "/downloads/feelings-friendships-journal.pdf",
     description: "Developed with child psychologists, this journal uses book characters as gentle mirrors for worry, anger, jealousy, and bravery.",
     highlights: [
       "Feelings wheel with kid-friendly animal expressions",
@@ -635,8 +635,8 @@ export const JOURNALS: JournalItem[] = [
     age: "Ages 3–8",
     color: "bg-[#6ecf9b]",
     tag: "Habit Builder",
-    downloadUrl: "/downloads/journals/tiny-triumphs-habit-diary.svg",
-    printableSvgPath: "/downloads/journals/tiny-triumphs-habit-diary.svg",
+    downloadUrl: "/downloads/tiny-triumphs-habit-diary.pdf",
+    printableSvgPath: "/downloads/tiny-triumphs-habit-diary.pdf",
     description: "Designed to accompany the 30-Day Reading Challenge, this daily diary lets kids record sound games, favorite blends, and silly host moments.",
     highlights: [
       "Day-by-day stickers and streak trackers",
