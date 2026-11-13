@@ -44,6 +44,24 @@ export function InstagramIcon({ className = "w-4 h-4", size = 16 }: { className?
   );
 }
 
+export function FacebookIcon({ className = "w-4 h-4", size = 16 }: { className?: string; size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
+
 /* ───────────────────────── brand mark & logo ───────────────────────── */
 export function Logo({ className = "h-12 w-12" }: { className?: string }) {
   return (
@@ -791,7 +809,7 @@ export function Footer() {
                 <span>@best.kidsbooks</span>
               </a>
               <a
-                href="https://www.pinterest.com/bestkidbooks"
+                href="https://www.pinterest.com/zehraraza345/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="chunky-sm press inline-flex items-center gap-1.5 rounded-full border-2 border-ink bg-paper px-3 py-1.5 text-[12.5px] font-extrabold text-ink transition-transform hover:scale-105 hover:bg-honey"
@@ -799,6 +817,16 @@ export function Footer() {
               >
                 <span className="font-serif font-black text-[#E60023]">P</span>
                 <span>Pinterest</span>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=740046505866724"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="chunky-sm press inline-flex items-center gap-2 rounded-full border-2 border-ink bg-paper px-3 py-1.5 text-[12.5px] font-extrabold text-ink transition-transform hover:scale-105 hover:bg-honey"
+                title="Follow BEST KidSbooks on Facebook"
+              >
+                <FacebookIcon size={15} className="text-[#1877F2]" />
+                <span>Facebook</span>
               </a>
             </div>
           </div>

@@ -142,8 +142,9 @@ export default function RootLayout({
                   "description": "Evidence-backed children picture books, multi-sensory phonics printables, family reading journals, and parent screen-time tools.",
                   "sameAs": [
                     "https://bestkidbooks.online",
-                    "https://www.instagram.com/best.kidsbooks/?hl=en",
-                    "https://www.pinterest.com/bestkidbooks"
+                    "https://www.instagram.com/best.kidsbooks/",
+                    "https://www.facebook.com/profile.php?id=740046505866724",
+                    "https://www.pinterest.com/zehraraza345/"
                   ]
                 },
                 {
