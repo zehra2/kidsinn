@@ -3,7 +3,12 @@ deployment:
   tasks:
     - export PATH=/home/zehra1/nodevenv/Kidsbooksstore/20/bin:$PATH
     - export NODE_ENV=production
-    - npm install
-    - npm run build
+    # Repo has only pnpm-lock.yaml (no package-lock.json), so npm install
+    # resolved fresh versions on the server. Use the locked pnpm install.
+    # NOTE: pnpm must be on PATH in the cPanel Node.js virtualenv
+    # (/home/zehra1/nodevenv/Kidsbooksstore/20/bin) — if the deploy fails
+    # with "pnpm: command not found", install pnpm into that venv first.
+    - pnpm install --frozen-lockfile
+    - pnpm run build
     - /bin/mkdir -p tmp
     - /bin/touch tmp/restart.txt
