@@ -73,12 +73,12 @@ export default function PrintablesPage() {
 
           <div className="mt-5 max-w-[800px]">
             <h1 className="text-[clamp(2.5rem,6.5vw,4.8rem)] leading-[1.02]">
-              Take reading joy
+              Free printable phonics
               <br />
-              <span className="text-orange">offline & hands-on.</span>
+              <span className="text-orange">worksheets for kids.</span>
             </h1>
             <p className="mt-4 text-[18px] leading-relaxed text-ink/80">
-              Printable sound-box mats, phonics detective hunts, coloring bookmarks, and gentle reading habit trackers. Designed to help children close the screen and connect over paper.
+              Free printable worksheets for kids that help them learn to read — sound-box mats, phonics detective hunts, coloring bookmarks, and gentle reading habit trackers. Designed to help children close the screen and connect over paper, offline &amp; hands-on.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-4 items-center">
@@ -105,7 +105,7 @@ export default function PrintablesPage() {
           <SectionHead
             kicker="Live Generator"
             title="The 7-Day Reading Joy Kit Builder"
-            sub="Set your family's comfortable daily reading time and what would feel like a win. Preview your custom tracker in real time and download as high-res SVG or PDF."
+            sub="Set your family's comfortable daily reading time and what would feel like a win. Preview your custom tracker in real time and download it as a high-res SVG."
           />
 
           <div className="chunky rounded-3xl bg-cream p-6 md:p-8">
@@ -167,7 +167,7 @@ export default function PrintablesPage() {
                     className="btn w-full justify-center bg-orange text-cream text-[16px] py-3.5"
                   >
                     <Download size={18} />
-                    Download Instant Print SVG / PDF
+                    Download Instant Print (SVG)
                   </a>
                   <p className="mt-2 text-center text-[11.5px] text-ink/60 font-semibold">
                     Free personal family use · Opens in any browser · Ready to print
@@ -248,7 +248,7 @@ export default function PrintablesPage() {
         <div className="mx-auto max-w-[1240px] px-4 md:px-8">
           <SectionHead
             kicker="Free Library"
-            title="All Printable Worksheets & Activities"
+            title="All free printable phonics worksheets & activities"
             sub="Select any category to view worksheets. Every item is tested with real children and classroom teachers for maximum joy and clarity."
           />
 
