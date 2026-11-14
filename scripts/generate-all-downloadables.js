@@ -33,7 +33,7 @@ function footer(note = "Free for personal family use · bestkidbooks.online · C
 // 1. CVC Sound-Box Mapping Mats
 const cvcMatSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1123" height="794" viewBox="0 0 1123 794">
   <title>CVC Sound-Box Mapping Mats</title>
-  ${header("CVC Sound-Box Mapping Mats", "Tap the sound · Slide the sound · Blend the word (Short A, E, I, O, U)", "PHONEMIC AWARENESS & CVC FOUNDATIONS")}
+  ${header("CVC Sound-Box Mapping Mats", "Tap the sound · Slide the sound · Blend the word (Short A, E, I, O, U)", "PHONEMIC AWARENESS &amp; CVC FOUNDATIONS")}
   
   <!-- Sound Boxes Grid -->
   <g transform="translate(55, 160)">
@@ -104,8 +104,8 @@ const cvcMatSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1123" height="
 
 // 2. Silent-e Magic Wand & Transformation Cards
 const silentESvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1123" height="794" viewBox="0 0 1123 794">
-  <title>Silent-e Magic Wand & Transformation Cards</title>
-  ${header("Silent-e Magic Wand & Transformation Cards", "Cut out the magic e wands · Slide over CVC words to make the vowel say its name!", "PHONICS TRANSFORMATION ACTIVITY")}
+  <title>Silent-e Magic Wand &amp; Transformation Cards</title>
+  ${header("Silent-e Magic Wand &amp; Transformation Cards", "Cut out the magic e wands · Slide over CVC words to make the vowel say its name!", "PHONICS TRANSFORMATION ACTIVITY")}
   
   <g transform="translate(55, 160)">
     <!-- Cut-out Magic Wands on Left -->
@@ -216,7 +216,7 @@ const silentESvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1123" height=
 // 3. 100-Book Wall Chart & Reading Tree
 const treeSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1123" height="794" viewBox="0 0 1123 794">
   <title>100-Book Wall Chart &amp; Reading Tree</title>
-  ${header("100-Book Wall Chart &amp; Reading Tree", "Color one apple or leaf every time you read a story together! (Rereads count!)", "READING HABIT & VOLUME TRACKER")}
+  ${header("100-Book Wall Chart &amp; Reading Tree", "Color one apple or leaf every time you read a story together! (Rereads count!)", "READING HABIT &amp; VOLUME TRACKER")}
   
   <g transform="translate(55, 155)">
     <!-- Tree Trunk & Canopy -->
@@ -281,7 +281,7 @@ const treeSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1123" height="79
 // 4. Color-Your-Own Animal Reading Bookmarks
 const bookmarksSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1123" height="794" viewBox="0 0 1123 794">
   <title>Color-Your-Own Animal Reading Bookmarks</title>
-  ${header("Color-Your-Own Animal Reading Bookmarks", "Cut along dashed lines · Color your bookmarks · Keep your place in bedtime stories!", "COLORING & FINE MOTOR SKILLS")}
+  ${header("Color-Your-Own Animal Reading Bookmarks", "Cut along dashed lines · Color your bookmarks · Keep your place in bedtime stories!", "COLORING &amp; FINE MOTOR SKILLS")}
   
   <g transform="translate(55, 155)">
     <!-- Bookmark 1: Reading Bear -->
@@ -417,7 +417,7 @@ const files = [
   // Journals
   { name: "bedtime-connection-journal.svg", folder: "journals", content: treeSvg.replace("100-Book Wall Chart", "The Bedtime Connection Journal Sample") },
   { name: "100-book-explorer-log.svg", folder: "journals", content: treeSvg.replace("100-Book Wall Chart", "The 100-Book Explorer Milestone Log") },
-  { name: "feelings-character-journal.svg", folder: "journals", content: treeSvg.replace("100-Book Wall Chart", "Feelings & Friendships Social-Emotional Journal") },
+  { name: "feelings-character-journal.svg", folder: "journals", content: treeSvg.replace("100-Book Wall Chart", "Feelings &amp; Friendships Social-Emotional Journal") },
   { name: "tiny-triumphs-habit-diary.svg", folder: "journals", content: treeSvg.replace("100-Book Wall Chart", "Tiny Triumphs 30-Day Habit Diary") },
 
   // Plans
@@ -426,8 +426,13 @@ const files = [
   // Books Guides
   { name: "fox-wakes-the-sun-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "Fox Wakes the Sun Companion Activity Pack") },
   { name: "whale-who-forgot-the-sea-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "Whale Who Forgot the Sea Bedtime Guide") },
-  { name: "mango-the-moon-cat-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "Mango the Moon Cat Astronomy & Star Guide") },
-  { name: "the-rabbit-listened-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "The Rabbit Listened Empathy & Comfort Guide") },
+  { name: "mango-the-moon-cat-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "Mango the Moon Cat Astronomy &amp; Star Guide") },
+  { name: "the-rabbit-listened-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "The Rabbit Listened Empathy &amp; Comfort Guide") },
+  { name: "the-book-with-no-pictures-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "The Book With No Pictures Laugh-Out-Loud Guide") },
+  { name: "jabari-jumps-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "Jabari Jumps Brave Reader Guide") },
+  { name: "ada-twist-scientist-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "Ada Twist, Scientist Curiosity Guide") },
+  { name: "magic-tree-house-dinosaurs-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "Magic Tree House: Dinosaurs Before Dark Adventure Guide") },
+  { name: "dog-man-guide.svg", folder: "books", content: bookmarksSvg.replace("Animal Reading Bookmarks", "Dog Man Graphic Novel Reading Guide") },
 ];
 
 files.forEach((f) => {
