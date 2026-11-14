@@ -1,0 +1,40 @@
+# bestkidbooks.online — Apache / LiteSpeed rules (cPanel host)
+# NOTE: requests proxied to the Node app bypass most rules in this file,
+# so the same redirects and headers are also enforced in next.config.ts
+# (redirects() / headers()) for Next.js routes. This file covers
+# anything Apache serves directly (static files, the document root).
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # HTTP -> HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # www -> non-www (canonical host is bestkidbooks.online)
+  RewriteCond %{HTTP_HOST} ^www\.bestkidbooks\.online$ [NC]
+  RewriteRule ^(.*)$ https://bestkidbooks.online/$1 [L,R=301]
+</IfModule>
+
+# Long-lived cache for downloads and images (they are versioned by filename)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(svg|pdf|png|jpg|jpeg|webp|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Security headers
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Internal files must never be served publicly.
+# (The 30-day Reels campaign CSV/XLSX lived under public/downloads/ and
+# was downloadable live. The deploy workflow now excludes them too;
+# this is the backstop.)
+<FilesMatch "\.(csv|xlsx)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^CHAT_LOG">
+  Require all denied
+</FilesMatch>
