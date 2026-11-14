@@ -5,6 +5,34 @@ export const metadata = {
   title: "Courses for parents — Raising a Reader, Phonics, Five Questions",
   description:
     "Short, practical courses for parents: a four-week read-aloud habit builder, a six-week phonics course for the kitchen table, and a free 45-minute workshop on asking better questions after any book.",
+  alternates: {
+    canonical: "https://bestkidbooks.online/courses",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://bestkidbooks.online/courses",
+    siteName: "BEST KidSbooks Shop",
+    title: "Courses for parents — Raising a Reader, Phonics, Five Questions",
+    description:
+      "Short, practical courses for parents: build the read-aloud habit, teach phonics at the kitchen table, and ask better questions after any book.",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 635,
+        height: 224,
+        alt: "BEST KidSbooks Shop Logo and Reading Bear Mascot",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Courses for parents — Raising a Reader, Phonics, Five Questions",
+    description:
+      "Short, practical courses for parents: build the read-aloud habit and teach phonics at the kitchen table.",
+    images: ["/images/logo.png"],
+    creator: "@bestkidbooks",
+  },
 };
 
 export default function CoursesPage() {
