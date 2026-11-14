@@ -68,12 +68,12 @@ export default function BooksPage() {
 
           <div className="mt-5 max-w-[840px]">
             <h1 className="text-[clamp(2.5rem,6.5vw,4.8rem)] leading-[1.02]">
-              Books chosen for how they
+              Picture books that help
               <br />
-              <span className="text-blue">sound out loud.</span>
+              <span className="text-blue">kids learn to read.</span>
             </h1>
             <p className="mt-4 text-[18px] leading-relaxed text-ink/85">
-              Every book on our shelf is tested with children for pacing, engagement, and emotional resonance. Plus, each card includes the exact discussion prompts to ask when you close the last page.
+              Every book on our shelf is tested with children for pacing, engagement, and emotional resonance — and chosen for how it sounds out loud. Plus, each card includes the exact discussion prompts to ask when you close the last page, with phonics for kids woven into every question.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-4 items-center">
@@ -81,7 +81,7 @@ export default function BooksPage() {
                 <Compass size={16} />
                 Use the Book Finder Quiz
               </a>
-              <Link href="/parent-tools#bedtime" className="btn bg-paper">
+              <Link href="/parent-tools#reading-goal" className="btn bg-paper">
                 <Clock size={16} />
                 Match to Bedtime Minutes
               </Link>
