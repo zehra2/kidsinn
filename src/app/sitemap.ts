@@ -1,66 +1,82 @@
 import { MetadataRoute } from "next";
 import { ALL_BOOKS, PRINTABLES, JOURNALS } from "@/lib/consolidated-data";
+import { STORIES } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://bestkidbooks.online";
-  const now = new Date().toISOString();
+
+  // NOTE: no fake lastModified. The old sitemap stamped every URL with
+  // the build date, which teaches Google to ignore lastmod entirely.
+  // Real dates are only listed where the content genuinely has one
+  // (story publish dates, the Advent hub launch date).
 
   // Core static pages
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/`,
-      lastModified: now,
       changeFrequency: "daily",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/printables`,
-      lastModified: now,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/journals`,
-      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/books`,
-      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/stories`,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/plans`,
-      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.85,
     },
     {
       url: `${baseUrl}/parent-tools`,
-      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.85,
     },
     {
       url: `${baseUrl}/courses`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
 
   // Dynamic printable pages
   const printableRoutes: MetadataRoute.Sitemap = PRINTABLES.map((p) => ({
     url: `${baseUrl}/printables/${p.id}`,
-    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.85,
   }));
@@ -68,7 +84,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic journal pages
   const journalRoutes: MetadataRoute.Sitemap = JOURNALS.map((j) => ({
     url: `${baseUrl}/journals/${j.id}`,
-    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.85,
   }));
@@ -76,10 +91,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic book companion pages
   const bookRoutes: MetadataRoute.Sitemap = ALL_BOOKS.map((b) => ({
     url: `${baseUrl}/books/${b.id}`,
-    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.85,
   }));
 
-  return [...staticRoutes, ...printableRoutes, ...journalRoutes, ...bookRoutes];
+  // Story articles (real publish dates)
+  const storyRoutes: MetadataRoute.Sitemap = STORIES.map((s) => ({
+    url: `${baseUrl}/stories/${s.slug}`,
+    lastModified: s.datePublished,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  // Christmas Book Advent hub
+  const adventRoute: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/stories/christmas-book-advent`,
+      lastModified: "2026-11-15",
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+  ];
+
+  return [
+    ...staticRoutes,
+    ...printableRoutes,
+    ...journalRoutes,
+    ...bookRoutes,
+    ...storyRoutes,
+    ...adventRoute,
+  ];
 }
