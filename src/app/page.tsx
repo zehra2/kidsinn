@@ -1,6 +1,6 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  AdSlot,
   Footer,
   JoinForm,
   Logo,
@@ -33,6 +33,41 @@ import {
   Heart,
   Video,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title:
+    "BEST KidSbooks Shop — Free Phonics Worksheets, Picture Books & Reading Journals",
+  description:
+    "Free phonics worksheets for kids, picture books chosen by read-aloud minutes, and bedtime reading journals — evidence-based tools that help children learn to read, without screens or sign-ups.",
+  alternates: {
+    canonical: "https://bestkidbooks.online",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://bestkidbooks.online",
+    siteName: "BEST KidSbooks Shop",
+    title: "BEST KidSbooks Shop — Turn Screen Time into Story Time",
+    description:
+      "Free phonics worksheets for kids, picture books chosen by read-aloud minutes, and bedtime reading journals. 100% free offline learning tools.",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 635,
+        height: 224,
+        alt: "BEST KidSbooks Shop Logo and Reading Bear Mascot",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BEST KidSbooks Shop — Picture Books, Phonics Printables & Journals",
+    description:
+      "Free phonics worksheets for kids that help them learn to read — plus picture books and bedtime journals. No sign-up, no child data.",
+    images: ["/images/logo.png"],
+    creator: "@bestkidbooks",
+  },
+};
 
 const STATS = [
   { n: "1.4M", l: "words heard by age 5", s: "at 5 books a day (Logan et al.)" },
