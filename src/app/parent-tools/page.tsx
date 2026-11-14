@@ -7,6 +7,34 @@ export const metadata = {
   title: "Free parent tools — AI Reading Coach, screen time, words, reading goals",
   description:
     "Free AI early literacy coach and calculators for parents: screen time minutes by age from AAP guidance, the million-word gap calculator, and printable question banks.",
+  alternates: {
+    canonical: "https://bestkidbooks.online/parent-tools",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://bestkidbooks.online/parent-tools",
+    siteName: "BEST KidSbooks Shop",
+    title: "Free parent tools — AI Reading Coach, screen time, words, reading goals",
+    description:
+      "Free AI early literacy coach and calculators for parents: screen time minutes by age, the million-word gap, and printable question banks.",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 635,
+        height: 224,
+        alt: "BEST KidSbooks Shop Logo and Reading Bear Mascot",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free parent tools — AI Reading Coach, screen time, words, reading goals",
+    description:
+      "Free AI early literacy coach and calculators for parents — screen time, the million-word gap, and reading goals.",
+    images: ["/images/logo.png"],
+    creator: "@bestkidbooks",
+  },
 };
 
 export default function ParentToolsPage() {
