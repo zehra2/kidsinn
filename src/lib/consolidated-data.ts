@@ -152,8 +152,8 @@ export const ALL_BOOKS: Book[] = [
     minutes: 9,
     price: "$13.99",
     blurb: "Turns the grown-up into the entertainment! Every single word must be read out loud, no matter how ridiculous.",
-    downloadUrl: "/downloads/books/fox-wakes-the-sun-guide.svg",
-    printableSvgPath: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    downloadUrl: "/downloads/books/the-book-with-no-pictures-guide.svg",
+    printableSvgPath: "/downloads/books/the-book-with-no-pictures-guide.svg",
     pedagogicalFocus: "Orthographic-to-phonological decoding joy, linguistic absurdism, and parent-child bonding through shared laughter.",
     vocabularyWords: ["ridiculous", "obligation", "preposterous"],
     dialogicGuide: {
@@ -182,8 +182,8 @@ export const ALL_BOOKS: Book[] = [
     minutes: 7,
     price: "$14.99",
     blurb: "Jabari is definitely ready to jump off the high diving board... or is he? A gentle story about being brave.",
-    downloadUrl: "/downloads/books/whale-who-forgot-the-sea-guide.svg",
-    printableSvgPath: "/downloads/books/whale-who-forgot-the-sea-guide.svg",
+    downloadUrl: "/downloads/books/jabari-jumps-guide.svg",
+    printableSvgPath: "/downloads/books/jabari-jumps-guide.svg",
     pedagogicalFocus: "Somatic anxiety awareness, father-son emotional support, deep breathing, and self-paced courage.",
     vocabularyWords: ["determined", "anticipation", "exhilarating"],
     dialogicGuide: {
@@ -212,8 +212,8 @@ export const ALL_BOOKS: Book[] = [
     minutes: 12,
     price: "$16.99",
     blurb: "Curious Ada has all the questions. Why does it tick? Why does it smell? A rhythmic celebration of curiosity.",
-    downloadUrl: "/downloads/books/mango-the-moon-cat-guide.svg",
-    printableSvgPath: "/downloads/books/mango-the-moon-cat-guide.svg",
+    downloadUrl: "/downloads/books/ada-twist-scientist-guide.svg",
+    printableSvgPath: "/downloads/books/ada-twist-scientist-guide.svg",
     pedagogicalFocus: "The scientific method, hypothesis generation, persistence through failure, and rich rhyming cadence.",
     vocabularyWords: ["hypothesis", "investigate", "chaos"],
     dialogicGuide: {
@@ -242,8 +242,8 @@ export const ALL_BOOKS: Book[] = [
     minutes: 20,
     price: "$6.99",
     blurb: "Jack and Annie discover a tree house filled with books that whisks them back to prehistoric times.",
-    downloadUrl: "/downloads/books/fox-wakes-the-sun-guide.svg",
-    printableSvgPath: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    downloadUrl: "/downloads/books/magic-tree-house-dinosaurs-guide.svg",
+    printableSvgPath: "/downloads/books/magic-tree-house-dinosaurs-guide.svg",
     pedagogicalFocus: "Transitioning to early chapter books, dual protagonist dynamics, and taking observational notes.",
     vocabularyWords: ["prehistoric", "crest", "fossil"],
     dialogicGuide: {
@@ -272,8 +272,8 @@ export const ALL_BOOKS: Book[] = [
     minutes: 25,
     price: "$12.99",
     blurb: "Part dog, part policeman, all hero! Visual storytelling packed with empathy, humor, and flip-o-ramas.",
-    downloadUrl: "/downloads/books/fox-wakes-the-sun-guide.svg",
-    printableSvgPath: "/downloads/books/fox-wakes-the-sun-guide.svg",
+    downloadUrl: "/downloads/books/dog-man-guide.svg",
+    printableSvgPath: "/downloads/books/dog-man-guide.svg",
     pedagogicalFocus: "Visual literacy, multimodal inference, redemption arcs, and comic book creation.",
     vocabularyWords: ["redemption", "clone", "villainous"],
     dialogicGuide: {
@@ -377,7 +377,7 @@ export const PRINTABLES: PrintableItem[] = [
     color: "bg-[#ffc531]",
     downloadUrl: "/downloads/printables/7-day-reading-kit.svg",
     printableSvgPath: "/downloads/printables/7-day-reading-kit.svg",
-    features: ["A4 Printable SVG / PDF ready", "Zero guilt / no scorekeeping", "Bedtime prompt cards included", "Mascot sticker stamps"],
+    features: ["A4 Printable SVG ready", "Zero guilt / no scorekeeping", "Bedtime prompt cards included", "Mascot sticker stamps"],
     pedagogyReason: "Habit formation research (Fogg Behavior Model) proves that tying a tiny reading session to an existing bedtime routine builds lifelong reader identity faster than high-pressure page quotas.",
     parentGuideSteps: [
       { step: "Step 1", title: "Tape to the Bedside or Fridge", desc: "Keep the tracker visible at eye level for your child so they anticipate story time." },
