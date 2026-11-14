@@ -1,19 +1,16 @@
-"use client";
-
-import { use } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Nav, Footer, SectionHead, Sticker, Wave } from "@/components/ui";
-import { ALL_BOOKS, type Book } from "@/lib/consolidated-data";
+import { Nav, Footer, SectionHead } from "@/components/ui";
+import { PrintButton } from "@/components/PrintButton";
+import { ALL_BOOKS } from "@/lib/consolidated-data";
 import {
-  Printer,
   Download,
   Check,
   Brain,
   Sparkles,
   ArrowLeft,
   BookOpen,
-  Heart,
   Clock,
   MessageSquare,
   ShieldCheck,
@@ -21,23 +18,64 @@ import {
   Lightbulb,
 } from "lucide-react";
 
-export default function BookDetailPage({
+export function generateStaticParams() {
+  return ALL_BOOKS.map((b) => ({ id: b.id }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const book = ALL_BOOKS.find((b) => b.id === id);
+  if (!book) return {};
+  const title = `${book.title}${book.author ? ` by ${book.author}` : ""} — Reading Guide & Discussion Questions`;
+  return {
+    title,
+    description: book.blurb,
+    alternates: {
+      canonical: `https://bestkidbooks.online/books/${book.id}`,
+    },
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url: `https://bestkidbooks.online/books/${book.id}`,
+      siteName: "BEST KidSbooks Shop",
+      title,
+      description: book.blurb,
+      images: [
+        {
+          url: "/images/logo.png",
+          width: 635,
+          height: 224,
+          alt: "BEST KidSbooks Shop Logo and Reading Bear Mascot",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: book.blurb,
+      images: ["/images/logo.png"],
+      creator: "@bestkidbooks",
+    },
+  };
+}
+
+export default async function BookDetailPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const resolvedParams = use(params);
-  const book = ALL_BOOKS.find((b) => b.id === resolvedParams.id);
+  const { id } = await params;
+  const book = ALL_BOOKS.find((b) => b.id === id);
 
   if (!book) {
     notFound();
   }
 
   const relatedBooks = ALL_BOOKS.filter((b) => b.id !== book.id).slice(0, 3);
-
-  const handlePrint = () => {
-    window.print();
-  };
 
   return (
     <>
@@ -148,16 +186,13 @@ export default function BookDetailPage({
                   className="btn bg-orange text-cream text-[16px] px-6 py-3.5 shadow-[4px_4px_0px_0px_#181a20] hover:bg-honey hover:text-ink transition-all"
                 >
                   <Download size={18} />
-                  Download Reading Companion Guide (SVG / PDF)
+                  Download Reading Companion Guide (SVG)
                 </a>
-                <button
-                  type="button"
-                  onClick={handlePrint}
+                <PrintButton
+                  label="Print Discussion Guide"
+                  size={18}
                   className="chunky-sm press rounded-full bg-paper px-6 py-3.5 font-display text-[15px] font-bold text-ink flex items-center gap-2 hover:bg-cream"
-                >
-                  <Printer size={18} />
-                  Print Discussion Guide
-                </button>
+                />
               </div>
 
               <div className="mt-4 flex items-center gap-2 text-[12.5px] font-bold text-ink/65">
@@ -251,14 +286,11 @@ export default function BookDetailPage({
                   <Download size={14} />
                   Download File
                 </a>
-                <button
-                  type="button"
-                  onClick={handlePrint}
+                <PrintButton
+                  label="Print"
+                  size={14}
                   className="chunky-sm press rounded-full bg-paper px-4 py-2 font-display text-[13.5px] font-bold text-ink flex items-center gap-1.5"
-                >
-                  <Printer size={14} />
-                  Print
-                </button>
+                />
               </div>
             </div>
 
