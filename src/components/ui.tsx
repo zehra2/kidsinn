@@ -20,7 +20,6 @@ import {
   Heart,
   Download,
   Star,
-  Clock,
   Compass,
 } from "lucide-react";
 
@@ -144,7 +143,6 @@ export function Nav() {
           items: [
             { title: "All Picture Books", desc: "Selected by aloud reading minutes", href: "/books", icon: BookOpen },
             { title: "Interactive Book Finder", desc: "Filter by age, goals & feelings", href: "/books#finder", icon: Compass },
-            { title: "Bedtime Matcher", desc: "Match stories to minutes before bed", href: "/parent-tools#bedtime", icon: Clock },
           ],
         },
         {
@@ -195,6 +193,14 @@ export function Nav() {
       items: [
         { title: "Raising a Reader (0–5s)", desc: "Build the 10-minute habit", href: "/courses", icon: GraduationCap },
         { title: "Phonics at the Table (5–7s)", desc: "Sound-by-sound without tears", href: "/courses", icon: BookOpen },
+      ],
+    },
+    {
+      label: "Stories",
+      href: "/stories",
+      items: [
+        { title: "All Stories", desc: "Reading ideas & research, plainly told", href: "/stories", icon: BookOpen },
+        { title: "Christmas Book Advent", desc: "One book a day, 1–24 December", href: "/stories/christmas-book-advent", icon: Sparkles },
       ],
     },
   ];
@@ -852,6 +858,7 @@ export function Footer() {
               <li><Link href="/printables#kit" className="text-[14.5px] text-cream/85 hover:text-honey">7-Day Reading Kit</Link></li>
               <li><Link href="/journals" className="text-[14.5px] text-cream/85 hover:text-honey">Reading Journals</Link></li>
               <li><Link href="/journals#100books" className="text-[14.5px] text-cream/85 hover:text-honey">100-Book Wall Chart</Link></li>
+              <li><Link href="/stories" className="text-[14.5px] text-cream/85 hover:text-honey">Stories & Reading Ideas</Link></li>
             </ul>
           </div>
 
@@ -863,7 +870,6 @@ export function Footer() {
               <li><Link href="/parent-tools#screen-time" className="text-[14.5px] text-cream/85 hover:text-honey">Screen Time Calculator</Link></li>
               <li><Link href="/parent-tools#million-words" className="text-[14.5px] text-cream/85 hover:text-honey">Million-Word Calculator</Link></li>
               <li><Link href="/parent-tools#questions" className="text-[14.5px] text-cream/85 hover:text-honey">After-Story Prompts</Link></li>
-              <li><Link href="/parent-tools#bedtime" className="text-[14.5px] text-cream/85 hover:text-honey">Bedtime Story Matcher</Link></li>
             </ul>
           </div>
 
@@ -875,7 +881,9 @@ export function Footer() {
               <li><Link href="/about" className="text-[14.5px] text-cream/85 hover:text-honey">Expertise & Sources</Link></li>
               <li><Link href="/courses" className="text-[14.5px] text-cream/85 hover:text-honey">Parent Mini-Courses</Link></li>
               <li><Link href="/about#methodology" className="text-[14.5px] text-cream/85 hover:text-honey">Selection Methodology</Link></li>
-              <li><Link href="/about#privacy" className="text-[14.5px] text-cream/85 hover:text-honey">Privacy & COPPA</Link></li>
+              <li><Link href="/privacy" className="text-[14.5px] text-cream/85 hover:text-honey">Privacy & COPPA</Link></li>
+              <li><Link href="/contact" className="text-[14.5px] text-cream/85 hover:text-honey">Contact Us</Link></li>
+              <li><Link href="/terms" className="text-[14.5px] text-cream/85 hover:text-honey">Terms of Use</Link></li>
             </ul>
           </div>
         </div>
