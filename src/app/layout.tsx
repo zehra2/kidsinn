@@ -36,9 +36,10 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  alternates: {
-    canonical: "https://bestkidbooks.online",
-  },
+  // NOTE: no root-level canonical — every page sets its own canonical
+  // in its own metadata (a hardcoded homepage canonical here made ~24
+  // pages point at "/" for Google). The home page sets its own in
+  // src/app/page.tsx.
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -141,7 +142,6 @@ export default function RootLayout({
                   },
                   "description": "Evidence-backed children picture books, multi-sensory phonics printables, family reading journals, and parent screen-time tools.",
                   "sameAs": [
-                    "https://bestkidbooks.online",
                     "https://www.instagram.com/best.kidsbooks/",
                     "https://www.facebook.com/profile.php?id=740046505866724",
                     "https://www.pinterest.com/zehraraza345/"
@@ -154,12 +154,10 @@ export default function RootLayout({
                   "name": "BEST KidSbooks Shop",
                   "publisher": {
                     "@id": "https://bestkidbooks.online/#organization"
-                  },
-                  "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://bestkidbooks.online/books?q={search_term_string}",
-                    "query-input": "required name=search_term_string"
                   }
+                  // NOTE: no SearchAction potentialAction — the site has
+                  // no /books?q= search; the schema promised one that
+                  // does not exist.
                 }
               ]
             })
