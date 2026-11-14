@@ -1,6 +1,11 @@
 # BEST KidSbooks Shop (bestkidbooks.online)
 > Premium early literacy platform, picture book discussion companions, multi-sensory phonics printables, and connection-focused family reading journals.
 
+<!-- NOTE: this static file shadows the generated route at src/app/llms.txt/route.ts,
+     which produces the same content dynamically from src/lib/consolidated-data.ts.
+     Keep the two in sync when the catalogue changes, or delete this file and let
+     the route serve /llms.txt instead. See fix-log.md (2026-11-14). -->
+
 ## Overview
 BEST KidSbooks Shop is dedicated to transforming reading from a bedtime battle into an emotionally intimate, joyful daily habit. Built upon clinical developmental research (AAP screen time recommendations, Ohio State University million-word gap studies, and Harvard Center on the Developing Child serve-and-return frameworks), all resources are 100% free with zero child data tracking.
 
@@ -10,6 +15,7 @@ BEST KidSbooks Shop is dedicated to transforming reading from a bedtime battle i
 - **Curated Books & Companion Guides**: https://bestkidbooks.online/books — Curated picture books with dialogic reading questions and discussion scripts.
 - **30-Day Reading Plans**: https://bestkidbooks.online/plans — 5-phase progressive micro-phonics challenge roadmap from sound play to long vowels.
 - **Parent Screen Time Tools**: https://bestkidbooks.online/parent-tools — Interactive AAP screen-time vs. story-time trade-off calculators and AI Early Literacy Coach.
+- **Stories & Reading Ideas**: https://bestkidbooks.online/stories — Plainly told reading research for parents, plus the Christmas Book Advent (one book a day, 1–24 December).
 
 ## Free Printable Worksheets (Instant Download)
 - [The 7-Day Reading Joy Kit & Conversation Prompts](https://bestkidbooks.online/printables/7-day-reading-kit): Customizable 7-day family tracker with 7 thoughtful conversation prompts to ask after bedtime stories. (Age: All Ages, File: /downloads/printables/7-day-reading-kit.svg)
@@ -19,6 +25,29 @@ BEST KidSbooks Shop is dedicated to transforming reading from a bedtime battle i
 - [Color-Your-Own Animal Reading Bookmarks](https://bestkidbooks.online/printables/animal-friend-bookmarks): Four printable bookmarks featuring Fox, Whale, Moon Cat, and Reading Bear. (Age: Ages 3–10, File: /downloads/printables/animal-friend-bookmarks.svg)
 - [Digraph Detective: sh, ch, th, wh Search](https://bestkidbooks.online/printables/digraph-detective-hunt): A fun picture-search printable where little detectives search for objects hiding digraph sounds. (Age: Ages 5–7, File: /downloads/printables/digraph-detective-hunt.svg)
 - [Official 30-Day Reading Champion Certificate](https://bestkidbooks.online/printables/reading-champion-certificate): A keepsake certificate honoring your child's curiosity, listening, and 30 days of reading moments. (Age: All Ages, File: /downloads/printables/reading-champion-certificate.svg)
+
+## Family Reading Journals
+- [The Bedtime Connection Journal](https://bestkidbooks.online/journals/bedtime-connection-journal): A 5-minute memory keeper for tired parents and curious kids. Rather than asking 'What was the story about?', this journal asks questions that connect the book's heart to your child's real day. (Age: Ages 3–7)
+- [The 100-Book Milestone Explorer Log](https://bestkidbooks.online/journals/100-book-milestone-explorer-log): Track, rate, and celebrate your child's first 100 books. A vibrant, illustrated book tracker that turns every completed story into a proud badge of honor. Built for rereads, graphic novels, and bedtime favorites. (Age: Ages 4–9)
+- [Feelings & Friendships Social-Emotional Journal](https://bestkidbooks.online/journals/feelings-character-journal): Help children name big feelings through story characters. Developed with child psychologists, this journal uses book characters as gentle mirrors for worry, anger, jealousy, and bravery. (Age: Ages 5–10)
+- [Tiny Triumphs 30-Day Reading Habit Diary](https://bestkidbooks.online/journals/tiny-triumphs-habit-diary): Build the daily reading habit, one joyful micro-win at a time. Designed to accompany the 30-Day Reading Challenge, this daily diary lets kids record sound games, favorite blends, and silly host moments. (Age: Ages 3–8)
+
+## Recommended Books & Dialogic Reading Guides
+- [Fox Wakes the Sun](https://bestkidbooks.online/books/fox-wakes-the-sun) by Eliza Thorn: A fox who refuses to wait for morning. Built for the 7am negotiation every parent knows. (Ages 3–5, 8 min read)
+- [Whale Who Forgot the Sea](https://bestkidbooks.online/books/whale-who-forgot-the-sea) by Calum Morris: A big blue whale, a small worry, and the tide that keeps turning up on time. (Ages 4–6, 10 min read)
+- [Mango the Moon Cat](https://bestkidbooks.online/books/mango-the-moon-cat) by Sora Kim: Mango climbs to the moon to count the stars, and loses track of exactly one. (Ages 5–7, 12 min read)
+- [The Rabbit Listened](https://bestkidbooks.online/books/the-rabbit-listened) by Cori Doerrfeld: When something sad happens, all the animals offer advice, but only the rabbit simply sits and listens. (Ages 2–5, 6 min read)
+- [The Book With No Pictures](https://bestkidbooks.online/books/the-book-with-no-pictures) by B. J. Novak: Turns the grown-up into the entertainment! Every single word must be read out loud, no matter how ridiculous. (Ages 4–8, 9 min read)
+- [Jabari Jumps](https://bestkidbooks.online/books/jabari-jumps) by Gaia Cornwall: Jabari is definitely ready to jump off the high diving board... or is he? A gentle story about being brave. (Ages 4–7, 7 min read)
+- [Ada Twist, Scientist](https://bestkidbooks.online/books/ada-twist-scientist) by Andrea Beaty: Curious Ada has all the questions. Why does it tick? Why does it smell? A rhythmic celebration of curiosity. (Ages 5–8, 12 min read)
+- [Magic Tree House: Dinosaurs Before Dark](https://bestkidbooks.online/books/magic-tree-house-dinosaurs) by Mary Pope Osborne: Jack and Annie discover a tree house filled with books that whisks them back to prehistoric times. (Ages 6–9, 20 min read)
+- [Dog Man: A Tale of Two Kitties](https://bestkidbooks.online/books/dog-man) by Dav Pilkey: Part dog, part policeman, all hero! Visual storytelling packed with empathy, humor, and flip-o-ramas. (Ages 7–11, 25 min read)
+
+## Research Citations & E-E-A-T Foundation
+- **American Academy of Pediatrics (AAP)**: Recommends limiting recreational screen time to 1 hour daily for children aged 2–5, and zero screen time under 18 months. Daily interactive reading builds emotional regulation and executive function.
+- **Ohio State University (Logan et al.)**: Children whose parents read 5 picture books a day enter kindergarten having heard ~1.4 million more words than children who are never read to. Even 1 book a day equates to a 290,000-word advantage.
+- **Lurie Children's Hospital Study**: Surveys indicate children under 13 now average over 21 hours of recreational screen time per week. A targeted 15-minute bedtime reading routine directly displaces screen stimulation before sleep.
+- **National Literacy Trust**: Children who maintain a daily reading routine are 3x more likely to have above-average mental wellbeing and significantly higher vocabulary confidence by age 8.
 
 ## Full In-Depth LLM Corpus
 For full dialogic scripts, phonics routines, and complete prompt sets, see:
