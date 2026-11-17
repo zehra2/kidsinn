@@ -129,16 +129,16 @@ export default function FeelingsCharacterJournalPage() {
                   {
                     "@type": "ListItem",
                     position: 3,
-                    name: "Feelings & Friendships Social-Emotional Journal",
+                    name: "Feelings Journal for Kids Printable",
                     item: "https://bestkidbooks.online/journals/feelings-character-journal",
                   },
                 ],
               },
               {
                 "@type": "LearningResource",
-                name: "Feelings & Friendships Social-Emotional Journal",
+                name: "Feelings Journal for Kids Printable",
                 description:
-                  "A printable social-emotional learning journal for children ages 5-10 that uses storybook characters as mirrors to explore emotions, build empathy, and reduce outbursts.",
+                  "A free feelings journal for kids printable: the Feelings & Friendships Social-Emotional Journal, a printable social-emotional learning journal for children ages 5-10 that uses storybook characters as mirrors to explore emotions, build empathy, and reduce outbursts.",
                 learningResourceType: "Social-Emotional Learning Activity Journal",
                 educationalLevel: "Kindergarten, Grade 1, Grade 2, Grade 3, Grade 4, Grade 5",
                 typicalAgeRange: "5-10",
@@ -202,7 +202,7 @@ export default function FeelingsCharacterJournalPage() {
                 </div>
 
                 <h1 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:leading-[1.15]">
-                  Feelings &amp; Friendships:{" "}
+                  Feelings Journal for Kids:{" "}
                   <span className="bg-gradient-to-r from-rose-600 via-pink-600 to-purple-700 bg-clip-text text-transparent">
                     Help Children Name Big Feelings
                   </span>{" "}
@@ -210,7 +210,7 @@ export default function FeelingsCharacterJournalPage() {
                 </h1>
 
                 <p className="mt-5 text-lg leading-relaxed text-slate-600 md:text-xl">
-                  Developed with child psychologists, this journal uses book characters as gentle mirrors for worry, anger, jealousy, and bravery. Give your child a safe, shame-free vocabulary to understand their inner world.
+                  This free feelings journal for kids printable, developed with child psychologists, uses book characters as gentle mirrors for worry, anger, jealousy, and bravery. Give your child a safe, shame-free vocabulary to understand their inner world.
                 </p>
 
                 {/* Primary & Secondary CTA Buttons */}
@@ -297,14 +297,14 @@ export default function FeelingsCharacterJournalPage() {
                     Direct Answer • AEO &amp; AI Overview Ready
                   </span>
                   <h2 className="font-display text-xl font-bold text-slate-900 md:text-2xl">
-                    What is the Feelings &amp; Friendships Social-Emotional Journal?
+                    What is the feelings journal for kids printable?
                   </h2>
                 </div>
               </div>
 
               <div className="mt-5 space-y-3.5 border-t border-rose-300/40 pt-5 text-base leading-relaxed text-slate-700 md:text-[17px]">
                 <p>
-                  <strong>The Feelings &amp; Friendships Social-Emotional Journal</strong> is a free printable literacy and emotional wellness workbook for children ages 5 to 10. Built upon Dr. Dan Siegel&apos;s <em>&ldquo;Name It to Tame It&rdquo;</em> neuroscience principle, it provides children with a safe psychological mirror: rather than putting kids on the spot about their own tantrums or anxieties, it invites them to analyze book characters first. Using an <strong>Animal Feelings Wheel</strong>, <strong>empathy spotlight prompts</strong>, and <strong>calming regulation toolkits</strong>, children develop the emotional vocabulary needed to resolve conflicts, express needs peacefully, and reduce behavioral outbursts.
+                  <strong>The feelings journal for kids printable</strong> — the Feelings &amp; Friendships Social-Emotional Journal — is a free printable literacy and emotional wellness workbook for children ages 5 to 10. Built upon Dr. Dan Siegel&apos;s <em>&ldquo;Name It to Tame It&rdquo;</em> neuroscience principle, it provides children with a safe psychological mirror: rather than putting kids on the spot about their own tantrums or anxieties, it invites them to analyze book characters first. Using an <strong>Animal Feelings Wheel</strong>, <strong>empathy spotlight prompts</strong>, and <strong>calming regulation toolkits</strong>, children develop the emotional vocabulary needed to resolve conflicts, express needs peacefully, and reduce behavioral outbursts.
                 </p>
               </div>
 
