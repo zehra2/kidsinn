@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Feelings & Friendships Social-Emotional Journal (Free Printable PDF | Ages 5–10)",
+    "Feelings Journal for Kids Printable — Free Social-Emotional Journal (Ages 5–10)",
   description:
-    "Download the Feelings & Friendships Social-Emotional Journal! A free printable activity journal for kids ages 5–10 featuring an Animal Feelings Wheel, empathy prompts, and calming toolkits.",
+    "Download this free feelings journal for kids printable! Help children name big feelings through story characters, with an Animal Feelings Wheel, empathy prompts, and calming toolkits — for kids ages 5–10.",
   keywords: [
+    "feelings journal for kids printable",
+    "feelings journal for kids",
+    "social emotional journal printable",
     "feelings and friendships journal",
     "social emotional learning printable pdf",
     "kids feelings wheel printable",
@@ -27,9 +30,9 @@ export const metadata: Metadata = {
     url: "https://bestkidbooks.online/journals/feelings-character-journal",
     siteName: "BEST KidSbooks Shop",
     title:
-      "Feelings & Friendships Social-Emotional Journal (Free Printable PDF | Ages 5–10)",
+      "Feelings Journal for Kids Printable — Free Social-Emotional Journal (Ages 5–10)",
     description:
-      "Help children name big feelings through story characters. Free printable with Animal Feelings Wheel, calming strategies, and empathy prompts.",
+      "A free feelings journal for kids printable: help children name big feelings through story characters. Animal Feelings Wheel, calming strategies, and empathy prompts.",
     images: [
       {
         url: "/images/feelings-journal-mockup.jpg",
@@ -42,9 +45,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Feelings & Friendships Social-Emotional Journal (Free Printable PDF | Ages 5–10)",
+      "Feelings Journal for Kids Printable — Free Social-Emotional Journal (Ages 5–10)",
     description:
-      "Help children name big feelings through story characters. Free printable with Animal Feelings Wheel, calming strategies, and empathy prompts.",
+      "A free feelings journal for kids printable: help children name big feelings through story characters. Animal Feelings Wheel, calming strategies, and empathy prompts.",
     images: ["/images/feelings-journal-mockup.jpg"],
   },
 };
