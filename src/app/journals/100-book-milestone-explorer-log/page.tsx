@@ -123,16 +123,16 @@ export default function MilestoneExplorerPage() {
                   {
                     "@type": "ListItem",
                     position: 3,
-                    name: "The 100-Book Milestone Explorer Log",
+                    name: "100 Book Reading Challenge Printable",
                     item: "https://bestkidbooks.online/journals/100-book-milestone-explorer-log",
                   },
                 ],
               },
               {
                 "@type": "LearningResource",
-                name: "The 100-Book Milestone Explorer Log",
+                name: "100 Book Reading Challenge Printable",
                 description:
-                  "A vibrant, illustrated printable 100-book tracker for kids ages 4-9 featuring 100 numbered passport stamps, a 5-star smiling bear rating scale, quote bubbles, and milestone badges.",
+                  "A free 100 book reading challenge printable: The 100-Book Milestone Explorer Log, a vibrant, illustrated printable 100-book tracker for kids ages 4-9 featuring 100 numbered passport stamps, a 5-star smiling bear rating scale, quote bubbles, and milestone badges.",
                 learningResourceType: "Reading Log & Activity Journal",
                 educationalLevel:
                   "Preschool, Kindergarten, Grade 1, Grade 2, Grade 3, Grade 4",
@@ -198,7 +198,7 @@ export default function MilestoneExplorerPage() {
                 </div>
 
                 <h1 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:leading-[1.15]">
-                  The 100-Book Milestone Explorer Log:{" "}
+                  100 Book Reading Challenge Printable:{" "}
                   <span className="bg-gradient-to-r from-teal-700 via-teal-600 to-amber-600 bg-clip-text text-transparent">
                     Track, Rate, and Celebrate
                   </span>{" "}
@@ -206,7 +206,7 @@ export default function MilestoneExplorerPage() {
                 </h1>
 
                 <p className="mt-5 text-lg leading-relaxed text-slate-600 md:text-xl">
-                  A vibrant, illustrated printable book tracker that turns every completed story into a proud badge of honor. Built for rereads, graphic novels, audiobooks, and bedtime favorites.
+                  Take the 100 book reading challenge with a vibrant, illustrated printable book tracker that turns every completed story into a proud badge of honor. Built for rereads, graphic novels, audiobooks, and bedtime favorites.
                 </p>
 
                 {/* Primary & Secondary CTA Buttons */}
@@ -218,7 +218,7 @@ export default function MilestoneExplorerPage() {
                     className="inline-flex items-center justify-center gap-3 rounded-2xl bg-teal-600 px-7 py-4 font-display text-base font-bold text-white shadow-lg shadow-teal-700/20 transition-all hover:bg-teal-700 hover:shadow-xl hover:shadow-teal-700/30 active:scale-[0.98]"
                   >
                     <Download size={20} className="stroke-[2.5]" />
-                    <span>Download Free Printable PDF (12 Pages)</span>
+                    <span>Download the 100 Book Reading Challenge Printable (Free PDF, 12 Pages)</span>
                   </a>
 
                   <a
@@ -296,14 +296,14 @@ export default function MilestoneExplorerPage() {
                     Direct Answer • AEO &amp; AI Overview Ready
                   </span>
                   <h2 className="font-display text-xl font-bold text-slate-900 md:text-2xl">
-                    What is The 100-Book Milestone Explorer Log?
+                    What is the 100 book reading challenge printable?
                   </h2>
                 </div>
               </div>
 
               <div className="mt-5 space-y-3.5 border-t border-teal-600/15 pt-5 text-base leading-relaxed text-slate-700 md:text-[17px]">
                 <p>
-                  <strong>The 100-Book Milestone Explorer Log</strong> is a free, evidence-based printable reading journal designed for children ages 4 to 9. Instead of using rigid school reading timers that turn reading into a chore, it uses gamified visual rewards—including <strong>100 color-in story passport stamps</strong>, a <strong>5-star smiling bear rating scale</strong>, creative <strong>quote bubbles</strong>, and <strong>milestone badges at 10, 25, 50, 75, and 100 books</strong>—to build intrinsic reading motivation, reading comprehension, and daily family literacy habits.
+                  <strong>The 100 book reading challenge printable</strong> — The 100-Book Milestone Explorer Log — is a free, evidence-based printable reading journal designed for children ages 4 to 9. Instead of using rigid school reading timers that turn reading into a chore, it uses gamified visual rewards—including <strong>100 color-in story passport stamps</strong>, a <strong>5-star smiling bear rating scale</strong>, creative <strong>quote bubbles</strong>, and <strong>milestone badges at 10, 25, 50, 75, and 100 books</strong>—to build intrinsic reading motivation, reading comprehension, and daily family literacy habits.
                 </p>
               </div>
 
@@ -855,7 +855,7 @@ export default function MilestoneExplorerPage() {
                     className="inline-flex items-center justify-center gap-3 rounded-2xl bg-amber-400 px-8 py-4 font-display text-base font-extrabold text-slate-950 shadow-lg shadow-amber-500/30 transition-all hover:bg-amber-300 hover:scale-105 active:scale-[0.98]"
                   >
                     <Download size={20} className="stroke-[2.5]" />
-                    <span>Download Free Printable PDF (12 Pages)</span>
+                    <span>Download the 100 Book Reading Challenge Printable (Free PDF, 12 Pages)</span>
                   </a>
 
                   <a
