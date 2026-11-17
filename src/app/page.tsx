@@ -120,13 +120,13 @@ export default function Home() {
             </h1>
 
             <p className="mt-5 max-w-[50ch] text-[18px] leading-relaxed text-ink/85">
-              Books chosen by how long they take to read out loud, free calculators that compute the million-word gap, 30-day phonics routines, and printable journals to make bedtime magical.
+              Free phonics worksheets for kids, books chosen by how long they take to read out loud, free calculators that compute the million-word gap, 30-day phonics routines, and printable journals to make bedtime magical.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/plans" className="btn bg-orange text-cream">
                 <Calendar size={18} />
-                Explore 30-Day Plan
+                Take the 30 Day Reading Challenge
               </Link>
               <Link href="/printables" className="btn bg-honey text-ink">
                 <Printer size={18} />
