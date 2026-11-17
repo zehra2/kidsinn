@@ -69,12 +69,12 @@ export default function PlansPage() {
           <div className="mt-5 grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
               <h1 className="text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.02]">
-                Learn to read in 30 days.
+                30 Day Reading Challenge for Kids.
                 <br />
-                <span className="text-orange">Keep the magic.</span>
+                <span className="text-orange">Learn to read in 30 days.</span>
               </h1>
               <p className="mt-4 max-w-[52ch] text-[18px] leading-relaxed text-ink/80">
-                A 30-day family reading roadmap designed around tiny, joyous micro-moments — daily phonics games and free phonics worksheets that help kids learn to read. From sound play and CVC blending to digraphs, silent-e, and rich bedtime discussions.
+                A free 30 day reading challenge for kids — a 30-day family reading roadmap built on tiny, joyous micro-moments, with daily phonics games and free phonics worksheets that help kids learn to read, and keep the magic. From sound play and CVC blending to digraphs, silent-e, and rich bedtime discussions.
               </p>
 
               {/* Progress Summary Card */}
@@ -117,7 +117,7 @@ export default function PlansPage() {
                   className="btn bg-paper"
                 >
                   <Download size={16} />
-                  Download 30-Day Tracker (SVG/PDF)
+                  Download the 30 Day Reading Challenge Tracker (SVG/PDF)
                 </a>
               </div>
             </div>
