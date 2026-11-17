@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "30-Day Reading Plan — Help Your Child Learn to Read with Daily Phonics Games",
+  title: "30 Day Reading Challenge for Kids — Free Plan to Learn to Read in 30 Days",
   description:
-    "A free 30-day reading plan that helps kids learn to read: daily micro-phonics games, CVC blending, digraphs and long vowels in 5 minutes a night. Free phonics worksheets and a printable certificate included.",
+    "Take the free 30 day reading challenge for kids: a 30-day plan that helps kids learn to read with daily micro-phonics games, CVC blending, digraphs and long vowels in 5 minutes a night. Free phonics worksheets and a printable certificate included.",
   keywords: [
+    "30 day reading challenge for kids",
     "30 day reading plan",
     "learn to read",
     "phonics for kids",
@@ -13,6 +14,8 @@ export const metadata: Metadata = {
     "reading challenge for kids",
     "daily phonics practice",
     "free printable worksheets for kids",
+    "phonics plan for kids",
+    "learn to read in 30 days",
   ],
   alternates: {
     canonical: "https://bestkidbooks.online/plans",
@@ -22,9 +25,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://bestkidbooks.online/plans",
     siteName: "BEST KidSbooks Shop",
-    title: "30-Day Reading Plan — Help Your Child Learn to Read",
+    title: "30 Day Reading Challenge for Kids — Learn to Read in 30 Days",
     description:
-      "A free 30-day reading plan: daily micro-phonics games that help kids learn to read, in 5 minutes a night.",
+      "A free 30 day reading challenge for kids: daily micro-phonics games that help kids learn to read, in 5 minutes a night.",
     images: [
       {
         url: "/images/logo.png",
@@ -36,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "30-Day Reading Plan — Help Your Child Learn to Read",
+    title: "30 Day Reading Challenge for Kids — Learn to Read in 30 Days",
     description:
-      "A free 30-day reading plan with daily phonics games. Five minutes a night, thirty days of tiny triumphs.",
+      "A free 30 day reading challenge for kids with daily phonics games. Five minutes a night, thirty days of tiny triumphs.",
     images: ["/images/logo.png"],
     creator: "@bestkidbooks",
   },
