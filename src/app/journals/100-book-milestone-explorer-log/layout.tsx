@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "100-Book Milestone Explorer Log (Free Printable PDF | Ages 4–9)",
+  title: "100 Book Reading Challenge Printable — Free 100-Book Log for Kids (Ages 4–9)",
   description:
-    "Download The 100-Book Milestone Explorer Log! A free, printable illustrated reading tracker for kids ages 4–9 with passport stamps, bear ratings & badges.",
+    "Take the 100 book reading challenge! Download this free 100 book reading challenge printable — an illustrated reading log for kids ages 4–9 with passport stamps, bear ratings and milestone badges.",
   keywords: [
+    "100 book reading challenge printable",
+    "100 book reading challenge",
+    "reading log for kids",
+    "books read log",
     "100 book milestone tracker for kids",
     "printable kids reading log pdf",
     "100 book challenge printable ages 4-9",
@@ -25,9 +29,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://bestkidbooks.online/journals/100-book-milestone-explorer-log",
     siteName: "BEST KidSbooks Shop",
-    title: "100-Book Milestone Explorer Log (Free Printable PDF | Ages 4–9)",
+    title: "100 Book Reading Challenge Printable — Free 100-Book Log for Kids (Ages 4–9)",
     description:
-      "Download The 100-Book Milestone Explorer Log! A free, printable illustrated reading tracker for kids ages 4–9 with passport stamps, bear ratings & badges.",
+      "Take the 100 book reading challenge! Download this free 100 book reading challenge printable — an illustrated reading log for kids ages 4–9 with passport stamps, bear ratings and milestone badges.",
     images: [
       {
         url: "/images/100-book-explorer-mockup.jpg",
@@ -39,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "100-Book Milestone Explorer Log (Free Printable PDF | Ages 4–9)",
+    title: "100 Book Reading Challenge Printable — Free 100-Book Log for Kids (Ages 4–9)",
     description:
-      "A free, printable illustrated reading tracker for kids ages 4–9 with passport stamps, bear ratings & badges.",
+      "Take the 100 book reading challenge! A free, printable illustrated reading tracker for kids ages 4–9 with passport stamps, bear ratings and milestone badges.",
     images: ["/images/100-book-explorer-mockup.jpg"],
   },
 };
